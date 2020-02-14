@@ -7,7 +7,6 @@
 
 ```
 npm init -y //在根目录下
-mkdir node_modules && cd node_modules
 cnpm i vant-weapp -S --production
 构建npm
 ```
