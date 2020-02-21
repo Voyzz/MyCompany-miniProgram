@@ -1,13 +1,31 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/commodity/commodity",
+    "pages/index/index",
+    "pages/introduction/introduction"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTitleText": "中帆东盛新材料",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/commodity/commodity",
+        "text": "样品选购"
+      },
+      {
+        "pagePath": "pages/introduction/introduction",
+        "text": "公司简介"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的主页"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }
