@@ -1,66 +1,69 @@
-// miniprogram/pages/homepage/homepage.js
+// ************ 首页 ************
+// pages/homepage/homepage.js
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    // 【轮播图】参数
+    swiper_params:{
+      "indicator_dots":true,
+      "autoplay":true
+    },
+    swiper_imgs:[
+      "http://voyz-image.test.upcdn.net/2020/03/06/9d7eaadc1f959d2360d1d4d50105eaae.jpg",
+      "http://voyz-image.test.upcdn.net/2020/03/06/9d7eaadc1f959d2360d1d4d50105eaae.jpg",
+      "http://voyz-image.test.upcdn.net/2020/03/06/9d7eaadc1f959d2360d1d4d50105eaae.jpg"
+    ],
+    // 【搜索框】参数
+    search_value:"",
+    placeholder:"  请输入您要搜索的产品",
+    search_shape:"round",
+    search_background:"#ffffff00",
+    // 【商品推荐】参数
+    tag_list:["全部","类别1","类别2","类别3"],
+    card_list:[
+      {
+        num:"2",
+        price:"2",
+        desc:'描述信息',
+        title:"标题",
+        thumb:'http://voyz-image.test.upcdn.net/2020/03/06/9d7eaadc1f959d2360d1d4d50105eaae.jpg'
+      },
+      {
+        num:"2",
+        price:"2",
+        desc:'描述信息',
+        title:"标题",
+        thumb:'http://voyz-image.test.upcdn.net/2020/03/06/9d7eaadc1f959d2360d1d4d50105eaae.jpg'
+      },
+      {
+        num:"2",
+        price:"2",
+        desc:'描述信息',
+        title:"标题",
+        thumb:'http://voyz-image.test.upcdn.net/2020/03/06/9d7eaadc1f959d2360d1d4d50105eaae.jpg'
+      },
+      {
+        num:"2",
+        price:"2",
+        desc:'描述信息',
+        title:"标题",
+        thumb:'http://voyz-image.test.upcdn.net/2020/03/06/9d7eaadc1f959d2360d1d4d50105eaae.jpg'
+      },
+      {
+        num:"2",
+        price:"2",
+        desc:'描述信息',
+        title:"标题",
+        thumb:'http://voyz-image.test.upcdn.net/2020/03/06/9d7eaadc1f959d2360d1d4d50105eaae.jpg'
+      }
+    ]
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
 
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage: function () {
 
-  }
+  },
 })

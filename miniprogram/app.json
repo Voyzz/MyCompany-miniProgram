@@ -32,8 +32,8 @@
       {
         "pagePath": "pages/commodity/commodity",
         "text": "样品采购",
-        "iconPath": "/images/tabBar/home_off.png",
-        "selectedIconPath": "/images/tabBar/home_on.png"
+        "iconPath": "/images/tabBar/com_off.png",
+        "selectedIconPath": "/images/tabBar/com_on.png"
       },
       {
         "pagePath": "pages/index/index",

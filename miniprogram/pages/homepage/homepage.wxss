@@ -1,1 +1,47 @@
 /* miniprogram/pages/homepage/homepage.wxss */
+.container {
+    width: 750rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+/* 头图 */
+.swiper_box {
+    width: 750rpx;
+    height: 420rpx;
+}
+.swiper_img {
+    width: 750rpx;
+    height: 420rpx;
+}
+
+/* 搜索框 */
+.search_box {
+    width: 550rpx;
+    position: absolute;
+    top: 20rpx;
+}
+.input_class {
+    font-size: 25rpx;
+}
+
+/* 推荐商品 */
+.recommend_box {
+    width: 750rpx;
+    height: 80rpx;
+    background-color: #fff;
+}
+.tag_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20rpx 20rpx;
+}
+.card_custom_class {
+    background-color: #fff!important;
+    margin-top: 10rpx;
+}

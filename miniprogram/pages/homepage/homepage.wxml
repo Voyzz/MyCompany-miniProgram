@@ -1,2 +1,38 @@
-<!--miniprogram/pages/homepage/homepage.wxml-->
-<text>miniprogram/pages/homepage/homepage.wxml</text>
+<div class="container">
+    <!-- 头图 -->
+    <swiper class="swiper_box" indicator-dots="{{swiper_params.indicator_dots}}" autoplay="{{swiper_params.autoplay}}">
+        <block wx:for="{{swiper_imgs}}">
+            <swiper-item><image src="{{item}}" class="swiper_img"></image></swiper-item>
+        </block>
+    </swiper>
+
+    <!-- 搜索框 -->
+    <div class="search_box">
+        <van-search input-class="input_class" value="{{search_value}}" placeholder="{{placeholder}}" shape="{{search_shape}}" background="{{search_background}}"/>
+    </div>
+
+    <!-- 商品展示 -->
+    <div class="recommend_box">
+        <!-- 标签 -->
+        <div class="tag_tags">
+            <van-tabs animated custom-class="tag_custom_class" color="#50e3c2">
+                <block wx:for="{{tag_list}}">
+                    <van-tab title="{{item}}">
+                        <div class="goods_card_box">
+                            <block wx:for="{{card_list}}">
+                                <van-card
+                                    custom-class="card_custom_class"
+                                    thumb-mode="aspectFill"
+                                    num="{{item.num}}"
+                                    price="{{item.price}}"
+                                    desc="{{item.desc}}"
+                                    title="{{item.title}}"
+                                    thumb="{{item.thumb}}"/>
+                            </block>
+                        </div>
+                    </van-tab>
+                </block>
+            </van-tabs>
+        </div>
+    </div>
+</div>

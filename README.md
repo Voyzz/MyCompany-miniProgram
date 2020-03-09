@@ -10,3 +10,5 @@ npm init -y //在根目录下
 cnpm i vant-weapp -S --production
 构建npm
 ```
+
+### 配置tabbar
