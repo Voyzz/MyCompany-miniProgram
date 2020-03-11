@@ -8,13 +8,13 @@
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#50e3c2",
+    "navigationBarBackgroundColor": "#40cfae",
     "navigationBarTitleText": "中帆东盛新材料",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#8a8a8a",
-    "selectedColor": "#50E3C2",
+    "selectedColor": "#40cfae",
     "borderStyle": "white",
     "list": [
       {
@@ -25,7 +25,7 @@
       },
       {
         "pagePath": "pages/introduction/introduction",
-        "text": "公司简介",
+        "text": "企业资讯",
         "iconPath": "/images/tabBar/intro_off.png",
         "selectedIconPath": "/images/tabBar/intro_on.png"
       },

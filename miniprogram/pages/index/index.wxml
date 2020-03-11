@@ -1,7 +1,12 @@
 <!--index.wxml-->
 <view class="container">
-
-  <van-button type="primary">按钮</van-button>
-
-
+  <!-- 背景图 -->
+  <image src="/images/mine/home_bg.png" class="mine_bg"></image>
+  <view class="content_box">
+    <!-- 头像昵称 -->
+    <view class="avatar_box">
+      <open-data type="userAvatarUrl" class="avatar"></open-data>
+      <open-data type="userNickName" class="nickName"></open-data>
+    </view>
+  </view>
 </view>
