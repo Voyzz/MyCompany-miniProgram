@@ -1,7 +1,7 @@
 /**index.wxss**/
 
 page {
-  background: #f6f6f6;
+  background: #fff;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -34,6 +34,7 @@ page {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  margin-bottom: 80rpx;
 }
 /* 头像 */
 .avatar {
@@ -46,7 +47,48 @@ page {
 .nickName {
   margin-top: 15rpx;
   font-size: 30rpx;
-  /* font-weight: bold; */
+  font-weight: bold;
   color: #f6f6f6;
 }
 
+/* 宫格 */
+.mine_square {
+  box-sizing: border-box;
+  width: 680rpx;
+  /* height: 700rpx; */
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-shadow: 0rpx 5rpx 20rpx 2rpx #7a7a7a30;
+  padding: 10rpx 30rpx;
+}
+.square_item_box {
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+.border_top {
+  border-top-style: dashed;
+  border-top-width: 1rpx;
+  border-top-color: #d6d5d5;
+}
+.square_icon {
+  width: 45rpx;
+  height: 45rpx;
+}
+.square_title {
+  height: 60rpx;
+  font-size: 27rpx;
+  line-height: 60rpx;
+  padding-left: 20rpx;
+  color: #6d6d6d;
+}
+.arrow {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  right:50rpx;
+}

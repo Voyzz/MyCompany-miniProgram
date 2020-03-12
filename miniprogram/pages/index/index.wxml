@@ -9,4 +9,14 @@
       <open-data type="userNickName" class="nickName"></open-data>
     </view>
   </view>
+  <!-- 宫格 -->
+  <view class="mine_square">
+    <block wx:for="{{squareList}}" wx:for-item="squareItem">
+      <view class="square_item_box {{index == 0 ? '' : 'border_top'}}">
+        <image src="{{squareItem.icon}}" class="square_icon"></image>
+        <view class="square_title">{{squareItem.title}}</view>
+        <image src="/images/icons/arrow_right.png" class="arrow"></image>
+      </view>
+    </block>
+  </view>
 </view>
