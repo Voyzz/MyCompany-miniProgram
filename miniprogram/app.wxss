@@ -25,9 +25,45 @@ page {
   justify-content: center;
   align-items: center;
 }
+.flex_column_start {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 .flex_row_center {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+.flex_row_start {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* 文字内容 */
+.common_title {
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 35rpx;
+  font-weight: bolder;
+  color: rgb(66, 66, 66);
+}
+.common_subtitle {
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 25rpx;
+  font-weight: bold;
+  color: rgb(179, 179, 179);
+  padding: 5rpx 0;
+}
+.common_content {
+  line-height: 45rpx;
+  font-size: 25rpx;
+  font-weight: bold;
+  color: rgb(160, 160, 160);
+  padding: 10rpx 0 0 0;
 }

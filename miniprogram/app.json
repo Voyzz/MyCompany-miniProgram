@@ -31,7 +31,7 @@
       },
       {
         "pagePath": "pages/commodity/commodity",
-        "text": "样品采购",
+        "text": "产品展示",
         "iconPath": "/images/tabBar/com_off.png",
         "selectedIconPath": "/images/tabBar/com_on.png"
       },

@@ -8,40 +8,87 @@
     position: relative;
 }
 
+
 /* 头图 */
 .swiper_box {
     width: 750rpx;
-    height: 420rpx;
+    height: 360rpx;
 }
 .swiper_img {
     width: 750rpx;
-    height: 420rpx;
+    height: 360rpx;
 }
+
 
 /* 搜索框 */
 .search_box {
-    width: 550rpx;
-    position: absolute;
-    top: 20rpx;
+    width: 750rpx;
+    /* position: absolute;
+    top: 20rpx; */
+    margin-bottom: 10rpx;
 }
 .input_class {
     font-size: 25rpx;
-}
-
-/* 推荐商品 */
-.recommend_box {
-    width: 750rpx;
-    height: 80rpx;
     background-color: #fff;
 }
-.tag_box {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 20rpx 20rpx;
+
+
+/* 产品推荐 */
+.goods_box {
+    box-sizing: border-box;
+    width: 690rpx;
+    height: 240rpx;
+    margin-bottom: 30rpx;
+    white-space: nowrap;
+    border-radius: 10rpx;
+    padding-left: 20rpx;
 }
-.card_custom_class {
-    background-color: #fff!important;
+.goods_item {
+    display: inline-block;
+    width: 250rpx;
+    height: 200rpx;
+    margin: 20rpx 20rpx 20rpx 0;
+    background-color: blue;
+    border-radius: 10rpx;
+    overflow: hidden;
+    position: relative;
+}
+.goods_img {
+    width: 250rpx;
+    height: 200rpx;
+}
+.goods_title {
+    width: 250rpx;
+    height: 50rpx;
+    color: #fff;
+    font-size: 25rpx;
+    line-height: 50rpx;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #00000050;
+}
+
+
+/* 标语 */
+.slogan_box {
+    box-sizing: border-box;
+    width: 750rpx;
+    background-color: #fff;
+    padding: 0rpx 25rpx;
+    margin-top: 50rpx;
+    margin-bottom: 80rrpx;
+}
+.slogan_img {
+    width: 650rpx;
+    height: 320rpx;
     margin-top: 10rpx;
+    background-color: #fff;
+}
+
+
+/* 新闻资讯 */
+.news_box {
+    margin-top: 50rpx;
 }
