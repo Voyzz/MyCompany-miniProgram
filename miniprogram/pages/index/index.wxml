@@ -9,8 +9,24 @@
       <open-data type="userNickName" class="nickName"></open-data>
     </view>
   </view>
+  <!-- 订单信息 -->
+  <view class="order_box common_shadow">
+    <view class="square_item_box">
+      <image src="{{orderInfo.icon}}" class="square_icon"></image>
+      <view class="square_title">{{orderInfo.title}}</view>
+      <image src="/images/icons/arrow_right.png" class="arrow"></image>
+    </view>
+    <view class="order_items_box border_top">
+      <block wx:for="{{orderInfo.orderItemsList}}" wx:for-item="orderItem">
+        <view class="flex_column_center order_item">
+          <van-icon name="{{orderItem.icon}}" info="{{orderItem.info}}" color="{{orderInfo.orderItemColor}}" size="55rpx"/>
+          <view class="order_title">{{orderItem.title}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
   <!-- 宫格 -->
-  <view class="mine_square">
+  <view class="mine_square common_shadow">
     <block wx:for="{{squareList}}" wx:for-item="squareItem">
       <view class="square_item_box {{index == 0 ? '' : 'border_top'}}">
         <image src="{{squareItem.icon}}" class="square_icon"></image>
@@ -19,4 +35,6 @@
       </view>
     </block>
   </view>
+  <!-- 署名 -->
+  <view class="myName flex_row_center">Powered By Voyz</view>
 </view>

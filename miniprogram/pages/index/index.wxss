@@ -10,6 +10,8 @@ page {
 .container {
   position: relative;
 }
+
+
 /* 背景图 */
 .mine_bg {
   width: 750rpx;
@@ -18,6 +20,7 @@ page {
   left: 0;
   top: 0;
   z-index: -1;
+  background-color: #fff;
 }
 
 .content_box {
@@ -27,6 +30,8 @@ page {
   align-items: center;
 }
 
+
+/* 头像 */
 .avatar_box {
   width: 750rpx;
   height: 250rpx;
@@ -34,22 +39,50 @@ page {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  margin-bottom: 80rpx;
+  margin-bottom: 55rpx;
 }
-/* 头像 */
 .avatar {
-  width: 150rpx;
-  height: 150rpx;
+  width: 140rpx;
+  height: 140rpx;
   border-radius: 100%;
   overflow: hidden;
 }
 /* 昵称 */
 .nickName {
-  margin-top: 15rpx;
+  margin-top: 10rpx;
   font-size: 30rpx;
   font-weight: bold;
-  color: #f6f6f6;
+  color: #fff;
 }
+
+
+/* 订单信息 */
+.order_box {
+  box-sizing: border-box;
+  width: 680rpx;
+  /* height: 700rpx; */
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding: 10rpx 30rpx;
+  margin-bottom: 20rpx;
+}
+.order_items_box {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* height: 140rpx; */
+  padding: 30rpx 30rpx 15rpx 30rpx;
+}
+.order_item {
+  height: 100rpx;
+}
+.order_title {
+  color: #9c9c9c;
+  font-size: 27rpx;
+}
+
 
 /* 宫格 */
 .mine_square {
@@ -58,7 +91,6 @@ page {
   /* height: 700rpx; */
   background-color: #fff;
   border-radius: 10rpx;
-  box-shadow: 0rpx 5rpx 20rpx 2rpx #7a7a7a30;
   padding: 10rpx 30rpx;
 }
 .square_item_box {
@@ -68,7 +100,6 @@ page {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  
 }
 .border_top {
   border-top-style: dashed;
@@ -91,4 +122,14 @@ page {
   height: 30rpx;
   position: absolute;
   right:50rpx;
+}
+
+
+/* 署名 */
+.myName {
+  font-size: 18rpx;
+  color: #a5a5a5;
+  text-align: center;
+  height: 70rpx;
+  line-height: 70rpx;
 }

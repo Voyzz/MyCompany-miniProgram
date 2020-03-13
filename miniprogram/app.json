@@ -8,14 +8,14 @@
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#40cfae",
+    "navigationBarBackgroundColor": "#679fe4",
     "navigationBarTitleText": "中帆东盛新材料",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#8a8a8a",
-    "selectedColor": "#40cfae",
-    "borderStyle": "white",
+    "selectedColor": "#679fe4",
+    "borderStyle": "black",
     "list": [
       {
         "pagePath": "pages/homepage/homepage",

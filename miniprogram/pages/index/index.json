@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "van-button": "vant-weapp/button"
-  }
+    "van-button": "vant-weapp/button",
+    "van-icon": "vant-weapp/icon"
+  },
+  "disableScroll": true
 }
