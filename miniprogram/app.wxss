@@ -27,6 +27,12 @@ page {
 }
 
 /* 布局 */
+.flex_column_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
 .flex_column_center {
   display: flex;
   flex-direction: column;

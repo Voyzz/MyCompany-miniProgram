@@ -1,1 +1,30 @@
 /* miniprogram/pages/introduction/introduction.wxss */
+
+/* 头图 */
+.intro_banner {
+    width: 750rpx;
+    height: 270rpx;
+}
+
+/* 公司简介 */
+.intro_info_box {
+    box-sizing: border-box;
+    width: 690rpx;
+    padding: 10rpx;
+    margin-top: 20rpx;
+}
+
+/* 公司地址 */
+.intro_address_box {
+    box-sizing: border-box;
+    width: 690rpx;
+    padding: 10rpx;
+    margin-top: 20rpx;
+}
+.intro_address_map_box {
+    margin-top: 20rpx;
+    width: 670rpx;
+    height: 300rpx;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
