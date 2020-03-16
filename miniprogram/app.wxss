@@ -18,6 +18,14 @@ page {
 .common_shadow {
   box-shadow: 0rpx 5rpx 20rpx 2rpx #7a7a7a30;
 }
+
+/* 分割线 */
+.border_top {
+  border-top-style: dashed;
+  border-top-width: 1rpx;
+  border-top-color: #d6d5d5;
+}
+
 /* 布局 */
 .flex_column_center {
   display: flex;
@@ -43,6 +51,12 @@ page {
   justify-content: flex-start;
   align-items: flex-start;
 }
+.flex_row_space {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
 /* 文字内容 */
 .common_title {
@@ -66,4 +80,18 @@ page {
   font-weight: bold;
   color: rgb(160, 160, 160);
   padding: 10rpx 0 0 0;
+}
+.text_overflow_two{
+  overflow:hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.text_overflow_one{
+  overflow:hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }

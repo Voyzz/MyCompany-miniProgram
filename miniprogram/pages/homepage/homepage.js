@@ -26,6 +26,32 @@ Page({
     // 【新闻资讯】参数
     news_title:"- 行业资讯 -",
     news_subtitle:"NEWS",
+    news_list:[
+      {
+        title:'这是新闻标题1',
+        coverImg:"http://voyz-image.test.upcdn.net/2020/03/13/a3906e48b0faa8421f34725376aa82a6.png",
+        content:'这是新闻内容这是新闻内容，这是新闻内容这是新闻内容，这是新闻内容这是新闻内容。',
+        data:"2020-03-13"
+      },
+      {
+        title:'这是新闻标题2',
+        coverImg:"http://voyz-image.test.upcdn.net/2020/03/13/31762353dded834e14ceedfeeda45aad.jpeg",
+        content:'这是新闻内容这是新闻内容，这是新闻内容这是新闻内容，这是新闻内容这是新闻内容。',
+        data:"2020-03-10"
+      },
+      {
+        title:'这是新闻标题3',
+        coverImg:"http://voyz-image.test.upcdn.net/2020/03/13/31762353dded834e14ceedfeeda45aad.jpeg",
+        content:'这是新闻内容这是新闻内容，这是新闻内容这是新闻内容，这是新闻内容这是新闻内容。',
+        data:"2020-02-13"
+      },
+      {
+        title:'这是新闻标题4',
+        coverImg:"http://voyz-image.test.upcdn.net/2020/03/13/31762353dded834e14ceedfeeda45aad.jpeg",
+        content:'这是新闻内容这是新闻内容，这是新闻内容这是新闻内容，这是新闻内容这是新闻内容。',
+        data:"2020-02-13"
+      },
+    ],
     // 【商品推荐】参数
     tag_list:["全部","类别1","类别2","类别3"],
     card_list:[
@@ -64,7 +90,7 @@ Page({
         title:"磷酸二氢铝",
         thumb:'http://voyz-image.test.upcdn.net/2020/03/13/31762353dded834e14ceedfeeda45aad.jpeg'
       }
-    ]
+    ],
   },
 
   onLoad: function (options) {

@@ -12,14 +12,20 @@
     </div>
 
     <!-- 产品推荐 -->
-    <scroll-view class="goods_box flex_row_start common_shadow" scroll-x="true">
-        <block wx:for="{{card_list}}" wx:for-item="goods_item">
-            <view class="goods_item">
-                <image class="goods_img" src="{{goods_item.thumb}}"></image>
-                <view class="goods_title">{{goods_item.title}}</view>
-            </view>
-        </block>
-    </scroll-view>
+    <view class="flex_column_center common_shadow goods_container">
+        <view class="goods_dec_box flex_row_space">
+            <view class="goods_dec">产品推荐</view>
+            <view class="goods_more">MORE ></view>
+        </view>
+        <scroll-view class="goods_box flex_row_start" scroll-x="true">
+            <block wx:for="{{card_list}}" wx:for-item="goods_item">
+                <view class="goods_item">
+                    <image class="goods_img" src="{{goods_item.thumb}}"></image>
+                    <view class="goods_title">{{goods_item.title}}</view>
+                </view>
+            </block>
+        </scroll-view>
+    </view>
 
     <!-- 宣传语 -->
     <div class="slogan_box flex_column_center">
@@ -30,8 +36,20 @@
     <image class="slogan_img" src="http://voyz-image.test.upcdn.net/2020/03/13/c1c7dd351f1d64cb345ee17fe81fe49d.png"></image>
 
     <!-- 新闻资讯 -->
-    <view class="news_box flex_column_center">
+    <view class="news_container flex_column_center">
         <div class="common_title">{{news_title}}</div>
         <div class="common_subtitle">{{news_subtitle}}</div>
+        <view class="news_box flex_column_start common_shadow" scroll-y="true">
+            <block wx:for="{{news_list}}" wx:for-item="news_item">
+                <view class="news_item_box flex_row_space {{index == 0 ? '' : 'border_top'}}" wx:if="{{index<3}}">
+                    <view class="flex_column_start news_left">
+                        <view class="news_title common_title text_overflow_one">{{news_item.title}}</view>
+                        <view class="news_content text_overflow_two common_content">{{news_item.content}}</view>
+                        <view class="news_data common_subtitle text_overflow_one">{{news_item.data}}</view>
+                    </view>
+                    <image class="news_coverImg" src="{{news_item.coverImg}}"></image>
+                </view>
+            </block>
+        </view>
     </view>
 </div>
