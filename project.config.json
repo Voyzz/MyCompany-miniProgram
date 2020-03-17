@@ -31,7 +31,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -50,6 +50,13 @@
 					"id": -1,
 					"name": "企业咨询",
 					"pathName": "pages/introduction/introduction",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "产品展示",
+					"pathName": "pages/commodity/commodity",
 					"scene": null
 				}
 			]

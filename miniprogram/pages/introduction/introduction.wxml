@@ -14,7 +14,7 @@
         <view class="common_subtitle">{{intro_address.subtitle}}</view>
         <!-- 地图 -->
         <view class="intro_address_map_box">
-            <map style="width: 100%;height: 100%;" longitude="{{map.longitude}}" latitude="{{map.latitude}}" scale="{{map.scale}}" markers="{{markers}}"></map>
+            <map style="width: 100%;height: 100%;border-radius: 10rpx;" longitude="{{map.longitude}}" latitude="{{map.latitude}}" scale="{{map.scale}}" markers="{{markers}}"></map>
         </view>
     </view>
 </view>

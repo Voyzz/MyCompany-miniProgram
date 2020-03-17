@@ -1,2 +1,4 @@
 <!--miniprogram/pages/commodity/commodity.wxml-->
-<text>miniprogram/pages/commodity/commodity.wxml</text>
+<view class="commodity_container flex_column_box">
+    
+</view>
