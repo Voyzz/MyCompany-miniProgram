@@ -6,7 +6,7 @@
     <view class="intro_info_box flex_column_start">
         <view class="common_title">{{intro_info.title}}</view>
         <view class="common_subtitle">{{intro_info.subtitle}}</view>
-        <view class="common_content">{{intro_info.content}}</view>
+        <text class="common_content">{{intro_info.content}}</text>
     </view>
     <!-- 公司地址 -->
     <view class="intro_address_box flex_column_start">
