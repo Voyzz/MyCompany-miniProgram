@@ -1,55 +1,59 @@
 <div class="container">
-    <!-- 头图 -->
-    <swiper class="swiper_box" easing-function="easeInOutCubic" indicator-dots="{{swiper_params.indicator_dots}}" autoplay="{{swiper_params.autoplay}}" indicator-color="{{swiper_params.indicator_color}}">
-        <block wx:for="{{swiper_imgs}}">
-            <swiper-item><image src="{{item}}" class="swiper_img"></image></swiper-item>
-        </block>
-    </swiper>
-
-    <!-- 搜索框 -->
-    <div class="search_box">
-        <van-search input-class="input_class" value="{{search_value}}" placeholder="{{placeholder}}" shape="{{search_shape}}" background="{{search_background}}"/>
-    </div>
-
-    <!-- 产品推荐 -->
-    <view class="flex_column_center common_shadow goods_container">
-        <view class="goods_dec_box flex_row_space">
-            <view class="goods_dec">产品推荐</view>
-            <view class="goods_more">MORE ></view>
+    <block wx:for="{{modules_data.modules}}" wx:for-item="module_item" wx:for-index="module_idx">
+        <!-- 头图 -->
+        <view wx:if="{{module_item.module_type == 'header'}}">
+            <swiper class="swiper_box" easing-function="easeInOutCubic" indicator-dots="{{module_item.module_data.config.indicator_dots}}" autoplay="{{module_item.module_data.config.autoplay}}" indicator-color="{{module_item.module_data.config.indicator_color}}">
+                <block wx:for="{{module_item.module_data.imgs}}" wx:for-item="img">
+                    <swiper-item><image src="{{img}}" class="swiper_img"></image></swiper-item>
+                </block>
+            </swiper>
         </view>
-        <scroll-view class="goods_box flex_row_start" scroll-x="true">
-            <block wx:for="{{card_list}}" wx:for-item="goods_item">
-                <view class="goods_item">
-                    <image class="goods_img" src="{{goods_item.thumb}}"></image>
-                    <view class="goods_title">{{goods_item.title}}</view>
-                </view>
-            </block>
-        </scroll-view>
-    </view>
 
-    <!-- 宣传语 -->
-    <div class="slogan_box flex_column_center">
-        <div class="common_title">{{slogan_title}}</div>
-        <div class="common_subtitle">{{slogan_subtitle}}</div>
-        <div class="common_content" style="padding: 0 50rpx;">{{slogan_content}}</div>
-    </div>
-    <image class="slogan_img" src="http://voyz-image.test.upcdn.net/2020/03/13/c1c7dd351f1d64cb345ee17fe81fe49d.png"></image>
+        <!-- 搜索框 -->
+        <view class="search_box" wx:if="{{module_item.module_type == 'search'}}">
+            <van-search input-class="input_class" value="{{module_item.module_data.search_value}}" placeholder="{{module_item.module_data.placeholder}}" shape="{{module_item.module_data.search_shape}}" background="{{module_item.module_data.search_background}}"/>
+        </view>
 
-    <!-- 新闻资讯 -->
-    <view class="news_container flex_column_center">
-        <div class="common_title">{{news_title}}</div>
-        <div class="common_subtitle">{{news_subtitle}}</div>
-        <view class="news_box flex_column_start common_shadow" scroll-y="true">
-            <block wx:for="{{news_list}}" wx:for-item="news_item">
-                <view class="news_item_box flex_row_space {{index == 0 ? '' : 'border_top'}}" wx:if="{{index<3}}">
-                    <view class="flex_column_start news_left">
-                        <view class="news_title common_title text_overflow_one">{{news_item.title}}</view>
-                        <view class="news_content text_overflow_two common_content">{{news_item.content}}</view>
-                        <view class="news_data common_subtitle text_overflow_one">{{news_item.data}}</view>
+        <!-- 产品推荐 -->
+        <view class="flex_column_center common_shadow goods_container" wx:if="{{module_item.module_type == 'goods'}}">
+            <view class="goods_dec_box flex_row_space">
+                <view class="goods_dec">产品推荐</view>
+                <view class="goods_more">MORE ></view>
+            </view>
+            <scroll-view class="goods_box flex_row_start" scroll-x="true">
+                <block wx:for="{{module_item.module_data.card_list}}" wx:for-item="goods_item">
+                    <view class="goods_item">
+                        <image class="goods_img" src="{{goods_item.thumb}}"></image>
+                        <view class="goods_title">{{goods_item.title}}</view>
                     </view>
-                    <image class="news_coverImg" src="{{news_item.coverImg}}"></image>
-                </view>
-            </block>
+                </block>
+            </scroll-view>
         </view>
-    </view>
+
+        <!-- 宣传语 -->
+        <div class="slogan_box flex_column_center" wx:if="{{module_item.module_type == 'slogan'}}">
+            <div class="common_title">{{module_item.module_data.slogan_title}}</div>
+            <div class="common_subtitle">{{module_item.module_data.slogan_subtitle}}</div>
+            <div class="common_content" style="padding: 0 50rpx;">{{module_item.module_data.slogan_content}}</div>
+        </div>
+        <image class="slogan_img" src="http://voyz-image.test.upcdn.net/2020/03/13/c1c7dd351f1d64cb345ee17fe81fe49d.png" wx:if="{{module_item.module_type == 'slogan'}}"></image>
+
+        <!-- 新闻资讯 -->
+        <view class="news_container flex_column_center" wx:if="{{module_item.module_type == 'news'}}">
+            <div class="common_title">{{module_item.module_data.news_title}}</div>
+            <div class="common_subtitle">{{module_item.module_data.news_subtitle}}</div>
+            <view class="news_box flex_column_start common_shadow" scroll-y="true">
+                <block wx:for="{{module_item.module_data.news_list}}" wx:for-item="news_item">
+                    <view class="news_item_box flex_row_space {{index == 0 ? '' : 'border_top'}}" wx:if="{{index<3}}">
+                        <view class="flex_column_start news_left">
+                            <view class="news_title common_title text_overflow_one">{{news_item.title}}</view>
+                            <view class="news_content text_overflow_two common_content">{{news_item.content}}</view>
+                            <view class="news_data common_subtitle text_overflow_one">{{news_item.data}}</view>
+                        </view>
+                        <image class="news_coverImg" src="{{news_item.coverImg}}"></image>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </block>
 </div>

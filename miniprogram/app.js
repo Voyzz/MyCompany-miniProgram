@@ -19,7 +19,6 @@ App({
       console.log(res)
     })
 
-    console.log('hhhhh')
     this.globalData = {}
   }
 })
