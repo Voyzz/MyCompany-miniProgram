@@ -1,66 +1,26 @@
 // miniprogram/pages/commodity/commodity.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    search_value:'',
+    activeKey:0
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-
+    // 头部渐变画布
+    // this.canvasHeader();
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+  canvasHeader: () => {
+    const _canvas = wx.createCanvasContext('commodity_header');
 
-  },
+    const grd = _canvas.createLinearGradient(0,0,0,150);
+    grd.addColorStop(0,'#679fe4');
+    grd.addColorStop(1,'#FFFFFF');
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+    _canvas.setFillStyle(grd);
+    _canvas.fillRect(0,0,750,150);
+    _canvas.draw();
   }
+
+  
 })

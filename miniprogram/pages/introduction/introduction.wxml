@@ -1,20 +1,22 @@
 <!--miniprogram/pages/introduction/introduction.wxml-->
 <view class="introduction_container flex_column_box">
-    <!-- 头图 -->
-    <image src="{{intro_banner}}" class="intro_banner"></image>
-    <!-- 公司简介 -->
-    <view class="intro_info_box flex_column_start">
-        <view class="common_title">{{intro_info.title}}</view>
-        <view class="common_subtitle">{{intro_info.subtitle}}</view>
-        <text class="common_content">{{intro_info.content}}</text>
-    </view>
-    <!-- 公司地址 -->
-    <view class="intro_address_box flex_column_start">
-        <view class="common_title">{{intro_address.title}}</view>
-        <view class="common_subtitle">{{intro_address.subtitle}}</view>
-        <!-- 地图 -->
-        <view class="intro_address_map_box">
-            <map style="width: 100%;height: 100%;border-radius: 10rpx;" longitude="{{map.longitude}}" latitude="{{map.latitude}}" scale="{{map.scale}}" markers="{{markers}}"></map>
+    <block wx:for="{{modules_data}}"  wx:for-item="module_item" wx:for-index="module_idx">
+        <!-- 头图 -->
+        <image wx:if="{{module_item.module_type == 'banner'}}" src="{{module_item.module_data.intro_banner}}" class="intro_banner" key="{{module_idx}}"></image>
+        <!-- 公司地址 -->
+        <view class="intro_address_box flex_column_start" wx:if="{{module_item.module_type == 'location'}}">
+            <view class="common_title">{{module_item.module_data.title}}</view>
+            <view class="common_subtitle">{{module_item.module_data.subtitle}}</view>
+            <!-- 地图 -->
+            <view class="intro_address_map_box">
+                <map style="width: 100%;height: 100%;border-radius: 10rpx;" longitude="{{module_item.module_data.mapPoint.longitude}}" latitude="{{module_item.module_data.mapPoint.latitude}}" scale="16" markers="{{[module_item.module_data.mapPoint]}}"></map>
+            </view>
         </view>
-    </view>
+        <!-- 公司简介 -->
+        <view wx:if="{{module_item.module_type == 'info'}}" class="intro_info_box flex_column_start">
+            <view class="common_title">{{module_item.module_data.title}}</view>
+            <view class="common_subtitle">{{module_item.module_data.subtitle}}</view>
+            <text class="common_content">{{module_item.module_data.content}}</text>
+        </view>
+    </block>
 </view>

@@ -1,1 +1,95 @@
 /* miniprogram/pages/commodity/commodity.wxss */
+.commodity_container {
+  position: relative;
+  height:100vh;
+  width:100vw;
+  background-color: #679fe4;
+}
+
+/* 搜索框 */
+.search_container {
+  box-sizing: border-box;
+  z-index: 9;
+  height:15vh;
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #679fe4;
+}
+.icon_left {
+  margin-left: 30rpx;
+  margin-top: 10rpx;
+}
+.search_box {
+  border-radius: 50rpx;
+  background-color: #ffffff40;
+  width: 500rpx;
+  height: 72rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20rpx;
+}
+.icon_right {
+  margin-right: 30rpx;
+  margin-top: 10rpx;
+}
+.placeholder {
+  color:#ffffffee;
+  font-size: 29rpx;
+}
+
+
+.list_container {
+  width: 750rpx;
+  min-height: 85vh;
+  background-color: #e5eaf4;
+  border-top-left-radius: 40rpx;
+  border-top-right-radius: 40rpx;
+  z-index: 99;
+  position: relative;
+}
+
+/* 侧边栏列表 */
+.sidebar_box {
+  padding-top: 4vh;
+  width: 180rpx;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-top-left-radius: 40rpx;
+}
+.sidebar_item {
+  height: 100rpx !important;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #ffffff !important;
+  font-size: 30rpx!important;
+  font-weight: bold!important;
+  color: #b9b9b9 !important;
+}
+.van-sidebar-item--selected {
+  border-color: #ff8691 !important;
+  color: #679fe4 !important;
+}
+
+/* 内容 */
+.content_box {
+  width: 570rpx;
+  /* min-height: 85vh; */
+  height: 85vh;
+  padding-top: 20rpx;
+  padding-left: 25rpx;
+  padding-bottom: 140rpx;
+}
+.card_box {
+  width: 520rpx;
+  border-radius: 20rpx;
+  margin-bottom: 25rpx;
+  box-shadow: 0rpx 5rpx 20rpx 2rpx #92a5fe30;
+}

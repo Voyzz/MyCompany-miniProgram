@@ -1,4 +1,8 @@
-<!--miniprogram/pages/commodity/commodity.wxml-->
+<import src="../../components/commodity/search.wxml"/>
+<import src="../../components/commodity/goods_list.wxml"/>
+
 <view class="commodity_container flex_column_box">
-    
+    <template is="commodity_search" />
+    <template is="commodity_list" />
+    <!-- <canvas canvas-id="commodity_header" class="commodity_header"></canvas> -->
 </view>

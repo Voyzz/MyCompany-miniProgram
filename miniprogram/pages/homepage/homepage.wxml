@@ -1,5 +1,5 @@
 <div class="container">
-    <block wx:for="{{modules_data.modules}}" wx:for-item="module_item" wx:for-index="module_idx">
+    <block wx:for="{{modules_data}}" wx:for-item="module_item" wx:for-index="module_idx">
         <!-- 头图 -->
         <view wx:if="{{module_item.module_type == 'header'}}">
             <swiper class="swiper_box" easing-function="easeInOutCubic" indicator-dots="{{module_item.module_data.config.indicator_dots}}" autoplay="{{module_item.module_data.config.autoplay}}" indicator-color="{{module_item.module_data.config.indicator_color}}">

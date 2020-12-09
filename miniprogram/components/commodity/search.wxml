@@ -1,0 +1,10 @@
+<template name='commodity_search'>
+  <view class="search_container">
+    <van-icon name="bar-chart-o" size="25px" custom-class="icon_left" color="white"/>
+    <view class="search_box">
+      <van-icon name="search" size="20px" custom-class="icon_right" color="white"/>
+      <input value="{{search_value}}" placeholder="请输入你想要的商品" placeholder-class="placeholder"/>
+    </view>
+    <van-icon name="arrow" size="25px" custom-class="icon_right" color="white"/>
+  </view>
+</template>

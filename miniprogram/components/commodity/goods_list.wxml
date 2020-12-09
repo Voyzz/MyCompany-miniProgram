@@ -1,0 +1,69 @@
+<template name='commodity_list'>
+  <view class="list_container flex_row_start">
+    <view class="sidebar_box common_shadow">
+      <van-sidebar active-key="{{ activeKey }}" custom-class="sidebar">
+        <van-sidebar-item title="标签名" custom-class="sidebar_item"/>
+        <van-sidebar-item title="标签名" custom-class="sidebar_item"/>
+        <van-sidebar-item title="标签名" custom-class="sidebar_item"/>
+      </van-sidebar>
+    </view>
+    <scroll-view class="content_box" scroll-x="false" scroll-y="true">
+      <van-card
+        custom-class ="card_box"
+        num="2"
+        price="2.00"
+        desc="描述信息"
+        title="商品标题"
+        thumb="https://lg-7pc5j6x4-1257302752.cos.ap-shanghai.myqcloud.com/test.png"
+      />
+      <van-card
+        custom-class ="card_box"
+        num="2"
+        price="2.00"
+        desc="描述信息"
+        title="商品标题"
+        thumb="https://lg-7pc5j6x4-1257302752.cos.ap-shanghai.myqcloud.com/test.png"
+      />
+      <van-card
+        custom-class ="card_box"
+        num="2"
+        price="2.00"
+        desc="描述信息"
+        title="商品标题"
+        thumb="https://lg-7pc5j6x4-1257302752.cos.ap-shanghai.myqcloud.com/test.png"
+      />
+      <van-card
+        custom-class ="card_box"
+        num="2"
+        price="2.00"
+        desc="描述信息"
+        title="商品标题"
+        thumb="https://lg-7pc5j6x4-1257302752.cos.ap-shanghai.myqcloud.com/test.png"
+      />
+      <van-card
+        custom-class ="card_box"
+        num="2"
+        price="2.00"
+        desc="描述信息"
+        title="商品标题"
+        thumb="https://lg-7pc5j6x4-1257302752.cos.ap-shanghai.myqcloud.com/test.png"
+      />
+      <van-card
+        custom-class ="card_box"
+        num="2"
+        price="2.00"
+        desc="描述信息"
+        title="商品标题"
+        thumb="https://lg-7pc5j6x4-1257302752.cos.ap-shanghai.myqcloud.com/test.png"
+      />
+      <van-card
+        custom-class ="card_box"
+        num="2"
+        price="2.00"
+        desc="描述信息"
+        title="商品标题"
+        thumb="https://lg-7pc5j6x4-1257302752.cos.ap-shanghai.myqcloud.com/test.png"
+      />
+    </scroll-view>
+  </view>
+</template>

@@ -16,7 +16,7 @@ page {
 /* common */
 /* 阴影 */
 .common_shadow {
-  box-shadow: 0rpx 5rpx 20rpx 2rpx #7a7a7a30;
+  box-shadow: 0rpx 5rpx 20rpx 2rpx #92a5fe30;
 }
 
 /* 分割线 */
