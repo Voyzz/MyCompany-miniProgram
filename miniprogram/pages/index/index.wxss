@@ -7,6 +7,10 @@ page {
   justify-content: flex-start;
 }
 
+.outer_box {
+  width: 100vw;
+  height: 100vh;
+}
 .container {
   position: relative;
 }
@@ -39,7 +43,7 @@ page {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  margin-bottom: 55rpx;
+  margin-bottom: 85rpx;
 }
 .avatar {
   width: 140rpx;
@@ -64,7 +68,7 @@ page {
   background-color: #fff;
   border-radius: 10rpx;
   padding: 10rpx 30rpx;
-  margin-bottom: 20rpx;
+  margin-bottom: 40rpx;
 }
 .order_items_box {
   box-sizing: border-box;

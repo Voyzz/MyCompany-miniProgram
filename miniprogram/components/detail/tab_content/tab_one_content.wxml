@@ -1,0 +1,27 @@
+<template name="detail_tab_one_contant">
+  <view class="detail_tab_one_contant_box">
+    <view class="detail_params_box common_shadow">
+      <view class="tab_content_title">产品简介</view>
+      <van-cell title-width="0" value="这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介" border="{{ false }}"/>
+    </view>
+
+    <view class="detail_params_box common_shadow">
+      <view class="tab_content_title">产品参数</view>
+      <van-cell-group>
+        <van-cell title="参数1" value="xxxx" />
+        <van-cell title="参数2" value="xxxx" />
+        <van-cell title="参数3" value="xxxx" />
+        <van-cell title="参数4" value="xxxx" border="{{ false }}" />
+      </van-cell-group>
+    </view>
+
+    <view class="detail_params_box common_shadow">
+      <view class="tab_content_title">主要用途</view>
+      <van-cell-group>
+        <van-cell title="" value="用途1" />
+        <van-cell title="" value="用途2" />
+        <van-cell title="" value="用途3" border="{{ false }}" />
+      </van-cell-group>
+    </view>
+  </view>
+</template>

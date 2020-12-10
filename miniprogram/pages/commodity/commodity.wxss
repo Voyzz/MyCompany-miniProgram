@@ -20,7 +20,7 @@
 }
 .icon_left {
   margin-left: 30rpx;
-  margin-top: 10rpx;
+  margin-bottom: 5rpx;
 }
 .search_box {
   border-radius: 50rpx;
@@ -35,7 +35,7 @@
 }
 .icon_right {
   margin-right: 30rpx;
-  margin-top: 10rpx;
+  margin-bottom: 5rpx;
 }
 .placeholder {
   color:#ffffffee;

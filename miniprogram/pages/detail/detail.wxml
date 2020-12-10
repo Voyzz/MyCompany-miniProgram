@@ -1,0 +1,23 @@
+<import src="../../components/detail/header.wxml" />
+<import src="../../components/detail/info.wxml" />
+<import src="../../components/detail/tab_list.wxml" />
+
+<view class="detail_container">
+  <!-- 头部背景图 -->
+  <template is="detail_header" data="{{prod_img}}"/>
+
+  <scroll-view 
+    class="detail_box"
+    scroll-x="false" 
+    scroll-y="true" 
+    show-scrollbar="{{false}}"
+    bounces="{{false}}"
+    enhanced="{{true}}"
+    >
+    <!-- 基本信息 -->
+    <template is="detail_info" data="{{prod_img}}"/>
+    <view class="extra_line" />
+    <!-- 详细信息 -->
+    <template is="detail_tab_list"/>
+  </scroll-view>
+</view>

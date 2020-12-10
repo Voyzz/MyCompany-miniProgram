@@ -1,0 +1,142 @@
+.detail_container {
+  width: 750rpx;
+  height: 100vh;
+  position: relative;
+}
+.detail_box {
+  width: 750rpx;
+  height: 100vh;
+  background-color: transparent;
+}
+
+/**************** 头部背景图 ****************/
+.header_box {
+  width: 750rpx;
+  height: 25vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+.header_img {
+  /* position: relative; */
+  width: 750rpx;
+  height: 25vh;
+  /* z-index: 1; */
+}
+.header_blur {
+  position: absolute;
+  width: 1500rpx;
+  height: 50vh;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+	background: rgba(0,0,0,0.1);
+	backdrop-filter: blur(10px);
+}
+
+
+/**************** 基本信息 ****************/
+.info_box {
+  width: 750rpx;
+  height: 320rpx;
+  border-top-left-radius: 40rpx;
+  border-top-right-radius: 40rpx;
+  position: relative;
+  /* top: -40rpx; */
+  background-color: #fff;
+  z-index: 99;
+  margin-top: 22vh;
+}
+.detail_avatar{
+  width: 280rpx;
+  height: 210rpx;
+  border-radius: 30rpx;
+  position: absolute;
+  left: 60rpx;
+  top:-80rpx;
+}
+.info_line1 {
+  box-sizing: border-box;
+  width: 750rpx;
+  height: 130rpx;
+  padding: 45rpx 50rpx 5rpx 50rpx;
+}
+.icon_box {
+  padding: 0 18rpx 0 20rpx;
+  height: 50rpx;
+  border-radius: 30rpx;
+  background-color: #ff8691;
+  margin-left: 20rpx;
+}
+.icon_text {
+  color: #fff;
+  margin-left: 10rpx;
+  font-size: 25rpx;
+}
+.info_line2 {
+  padding: 30rpx 60rpx;
+}
+.info_title {
+  font-size: 45rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+  color: #000000aa;
+}
+.info_subtitle {
+  font-size: 32rpx;
+  font-weight: light;
+  color: #858585;
+}
+
+/**************** 详细信息 ****************/
+.extra_line {
+  width: 750rpx;
+  height: 30rpx;
+  position: relative;
+  background-color: #fff;
+  z-index: 10;
+}
+.tabList_box {
+  width: 750rpx;
+  background-color: #fff;
+  position: relative;
+  z-index: 99;
+  /* padding-bottom: 25vh; */
+}
+.tabList_title_style {
+  font-size: 50rpx;
+}
+.tab_content_title {
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 32rpx;
+  color: #679fe4;
+  padding: 0 30rpx;
+}
+/* tab1 */
+.detail_tab_one_contant_box {
+  box-sizing: border-box;
+  width: 750rpx;
+  padding: 40rpx;
+}
+.detail_params_box {
+  margin-bottom: 30rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  padding-bottom: 30rpx;
+}
+/* tab2 */
+.detail_tab_two_contant_box {
+  box-sizing: border-box;
+  width: 750rpx;
+  padding: 40rpx;
+}
+.detail_img_box {
+  border-radius: 20rpx;
+  overflow: hidden;
+  width: 670rpx;
+  height: 375rpx;
+  margin-bottom: 50rpx;
+}

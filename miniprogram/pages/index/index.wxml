@@ -1,4 +1,5 @@
 <!--index.wxml-->
+<scroll-view class="outer_box" scroll-x="false" scroll-y="true">
 <view class="container">
   <!-- 背景图 -->
   <image src="/images/mine/home_bg.png" class="mine_bg"></image>
@@ -17,7 +18,7 @@
       <image src="/images/icons/arrow_right.png" class="arrow"></image>
     </view>
     <view class="order_items_box border_top">
-      <block wx:for="{{orderInfo.orderItemsList}}" wx:for-item="orderItem">
+      <block wx:for="{{orderInfo.orderItemsList}}" wx:for-item="orderItem" wx:key="index">
         <view class="flex_column_center order_item">
           <van-icon name="{{orderItem.icon}}" info="{{orderItem.info}}" color="{{orderInfo.orderItemColor}}" size="55rpx"/>
           <view class="order_title">{{orderItem.title}}</view>
@@ -27,7 +28,7 @@
   </view>
   <!-- 宫格 -->
   <view class="mine_square common_shadow">
-    <block wx:for="{{squareList}}" wx:for-item="squareItem">
+    <block wx:for="{{squareList}}" wx:for-item="squareItem" wx:key="index">
       <view class="square_item_box {{index == 0 ? '' : 'border_top'}}">
         <image src="{{squareItem.icon}}" class="square_icon"></image>
         <view class="square_title">{{squareItem.title}}</view>
@@ -36,5 +37,6 @@
     </block>
   </view>
   <!-- 署名 -->
-  <view class="myName flex_row_center">Powered By Voyz</view>
+  <view class="myName flex_row_center">Powered By Voyz Shen</view>
 </view>
+</scroll-view>

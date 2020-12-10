@@ -9,12 +9,12 @@
     </view>
     <scroll-view class="content_box" scroll-x="false" scroll-y="true">
       <van-card
+        centered="true"
         custom-class ="card_box"
-        num="2"
-        price="2.00"
         desc="描述信息"
         title="商品标题"
         thumb="https://lg-7pc5j6x4-1257302752.cos.ap-shanghai.myqcloud.com/test.png"
+        thumb-link="/pages/detail/detail?_id=999"
       />
       <van-card
         custom-class ="card_box"
@@ -23,6 +23,7 @@
         desc="描述信息"
         title="商品标题"
         thumb="https://lg-7pc5j6x4-1257302752.cos.ap-shanghai.myqcloud.com/test.png"
+        thumb-link="/pages/detail/detail?_id=999"
       />
       <van-card
         custom-class ="card_box"
@@ -31,6 +32,7 @@
         desc="描述信息"
         title="商品标题"
         thumb="https://lg-7pc5j6x4-1257302752.cos.ap-shanghai.myqcloud.com/test.png"
+        thumb-link="/pages/detail/detail?_id=999"
       />
       <van-card
         custom-class ="card_box"

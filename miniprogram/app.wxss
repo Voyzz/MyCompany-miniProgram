@@ -63,6 +63,12 @@ page {
   justify-content: space-between;
   align-items: center;
 }
+.flex_row_end {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
 
 /* 文字内容 */
 .common_title {

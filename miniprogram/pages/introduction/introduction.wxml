@@ -1,6 +1,6 @@
 <!--miniprogram/pages/introduction/introduction.wxml-->
 <view class="introduction_container flex_column_box">
-    <block wx:for="{{modules_data}}"  wx:for-item="module_item" wx:for-index="module_idx">
+    <block wx:for="{{modules_data}}"  wx:for-item="module_item" wx:for-index="module_idx" wx:key="index">
         <!-- 头图 -->
         <image wx:if="{{module_item.module_type == 'banner'}}" src="{{module_item.module_data.intro_banner}}" class="intro_banner" key="{{module_idx}}"></image>
         <!-- 公司地址 -->

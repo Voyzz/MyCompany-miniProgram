@@ -1,0 +1,31 @@
+<template name="detail_tab_two_contant">
+  <view class="detail_tab_two_contant_box">
+    <view class="detail_img_box common_shadow">
+      <van-image
+        width="670rpx"
+        height="375rpx"
+        fit="fill"
+        lazy-load
+        src="https://img.yzcdn.cn/vant/cat.jpeg"
+      />
+    </view>
+    <view class="detail_img_box common_shadow">
+      <van-image
+        width="670rpx"
+        height="375rpx"
+        fit="fill"
+        lazy-load
+        src="https://img.yzcdn.cn/vant/cat.jpeg"
+      />
+    </view>
+    <view class="detail_img_box common_shadow">
+      <van-image
+        width="670rpx"
+        height="375rpx"
+        fit="fill"
+        lazy-load
+        src="https://img.yzcdn.cn/vant/cat.jpeg"
+      />
+    </view>
+  </view>
+</template>

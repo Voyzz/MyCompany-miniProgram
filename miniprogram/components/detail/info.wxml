@@ -1,0 +1,22 @@
+<template name="detail_info">
+  <view class="info_box common_shadow">
+    <!-- 头像 -->
+    <image src="{{prod_img}}" class="detail_avatar common_shadow" />
+    <!-- icon -->
+    <view class="info_line1 flex_row_end">
+      <view class="icon_box flex_row_space common_shadow">
+        <van-icon name="like" size="16px" custom-class="icon" color="white"/>
+        <text class="icon_text">收藏</text>
+      </view>
+      <view class="icon_box flex_row_space common_shadow" style="background-color:#92a5fe" >
+        <van-icon name="service" size="16px" custom-class="icon" color="white"/>
+        <text class="icon_text">咨询</text>
+      </view>
+    </view>
+    <!-- title -->
+    <view class="info_line2">
+      <view class="info_title">商品标题</view>
+      <view class="info_subtitle">Production Subtilte</view>
+    </view>
+  </view>
+</template>
