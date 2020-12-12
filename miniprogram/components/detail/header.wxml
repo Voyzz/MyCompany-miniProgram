@@ -1,6 +1,6 @@
 <template name="detail_header">
   <view class='header_box'>
-    <image src="{{prod_img}}" class="header_img" mode="aspectFill"/>
+    <image src="{{img_url}}" class="header_img" mode="aspectFill"/>
     <view class="header_blur" />
   </view>
 </template>

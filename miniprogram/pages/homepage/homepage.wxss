@@ -7,131 +7,241 @@
     align-items: center;
     position: relative;
 }
+.homepage_box {
+    width: 750rpx;
+    height: 100vh;
+}
 
 
 /* 头图 */
 .swiper_box {
     width: 750rpx;
-    height: 360rpx;
+    height: 32vh;
 }
 .swiper_img {
     width: 750rpx;
-    height: 360rpx;
+    height: 31vh;
 }
 
-
-/* 搜索框 */
-.search_box {
+/* 波浪 */
+.wave {
+    position: absolute;
+    left: 0;
+    top: 25vh;
+    z-index: 100;
+}
+.wave_img {
     width: 750rpx;
-    /* position: absolute;
-    top: 20rpx; */
-    margin: 15rpx;
+    height: 7vh;
 }
-.input_class {
-    font-size: 25rpx;
-    background-color: #fff;
+
+/* 背景渐变色 */
+.bg_color {
+    position: absolute;
+    left: 0;
+    top: 30vh;
+    width: 750rpx;
+    height: 70vh;
+    z-index: 90;
+    background: linear-gradient(to top, rgba(231, 237, 252, 0.5), #fff); 
 }
 
 
-/* 产品推荐 */
+/************ 上排模块 ************/
 .goods_container {
+    position: relative;
+    margin-top: 0rpx;
     margin-bottom: 20rpx;
-    border-radius: 10rpx;
+    border-radius: 30rpx;
+    overflow: hidden;
+    z-index: 100;
+    background-color: #F2F5FC80;
 }
+
+.goods_title_box {
+    height: 20vh;
+    width: 650rpx;
+}
+.hot_commodity_img {
+    width: 15vh;
+    height: 15vh;
+    margin-right: 40rpx;
+}
+.icon_text_box {
+    height: 8vh;
+}
+.icon_title {
+    font-size: 36rpx;
+    color: #324eacbb;
+    font-weight: bolder;
+}
+.icon_subtitle {
+    font-size: 29rpx;
+    color: #b1b1b1;
+}
+
 .goods_box {
     box-sizing: border-box;
-    width: 690rpx;
-    height: 240rpx;
-    white-space: nowrap;
-    padding-left: 20rpx;
+    width: 650rpx;
+    height: 17vh;
+    /* white-space: nowrap; */
+    /* padding-left: 20rpx; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 .goods_item {
-    display: inline-block;
-    width: 250rpx;
-    height: 200rpx;
+    width: 18vh;
+    height: 13vh;
     margin: 20rpx 20rpx 20rpx 0;
-    background-color: #e3e3e3;
-    border-radius: 10rpx;
-    overflow: hidden;
+    border-radius: 20rpx;
     position: relative;
+    box-shadow: 0rpx 5rpx 20rpx 2rpx #a4a6b130;
 }
 .goods_img {
-    width: 250rpx;
-    height: 200rpx;
+    width: 18vh;
+    height: 13vh;
+    border-radius: 20rpx;
 }
-.goods_title {
-    width: 250rpx;
-    height: 50rpx;
-    color: #fff;
-    font-size: 25rpx;
-    line-height: 50rpx;
-    text-align: center;
+.goods_title_shadow {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: #00000050;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to top, #1e1e5d20, #1e1e5d00);
+    border-bottom-left-radius: 20rpx;
+    border-bottom-right-radius: 20rpx;
 }
-.goods_dec_box {
-    box-sizing: border-box;
-    height: 65rpx;
+.goods_title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 18vh;
+    height: 60rpx;
+    text-align: center;
+    color: #324eac77;
+    font-weight: bold;
+    font-size: 26rpx;
+    line-height: 60rpx;
+}
+
+
+/************ 下排模块 ************/
+.bottom_line_container {
+    position: relative;
+    margin-top: 2vh;
+    z-index: 99;
     width: 650rpx;
-    padding:10rpx;
-    border-bottom-style: dashed;
-    border-bottom-width: 1rpx;
-    border-bottom-color: #ececec;
 }
-.goods_dec {
-    font-size: 25rpx;
-    color: #8a8a8a;
+/* 新闻模块 */
+.bottom_line_news_box {
+    width: 305rpx;
+    height: 26vh;
+    background-color: #F2F5FC80;
+    border-radius: 40rpx;
 }
-.goods_more {
+.news_img {
+    width: 13vh;
+    height: 13vh;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+}
+.news_icon_title{
+    font-size: 32rpx;
+    color: #324eacbb;
+    font-weight: bolder;
+}
+.news_icon_subtitle {
+    font-size: 26rpx;
+    color: #b1b1b1;
+}
+.bottom_line_info_box {
+    height: 12vh;
+    width: 305rpx;
+    background-color: #F2F5FC80;
+    border-radius: 40rpx;
+    margin-bottom: 2vh;
+}
+.bottom_right_img {
+    width: 8vh;
+    height: 8vh;
+    margin-right: 1vh;
+}
+.bottom_right_title{
+    font-size: 28rpx;
+    color: #324eacbb;
+    font-weight: bolder;
+    margin-bottom: 3rpx;
+}
+.bottom_right_subtitle {
     font-size: 20rpx;
-    color: #8a8a8a;
+    color: #b1b1b1;
+}
+.bottom_right_title_box {
+    /* width: 12vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottom_line_contect_box {
+    height: 12vh;
+    width: 305rpx;
+    background-color: #F2F5FC80;
+    border-radius: 40rpx;
 }
 
-
-/* 标语 */
-.slogan_box {
-    box-sizing: border-box;
+/************ 弹出内容 ************/
+.popup_content_container {
+    /* height: 50vh; */
+    max-height: 60vh;
     width: 750rpx;
-    background-color: #fff;
-    padding: 0rpx 25rpx;
-    margin-top: 30rpx;
-    margin-bottom: 80rrpx;
 }
-.slogan_img {
+.popup_news_box {
+    padding: 60rpx 50rpx;
+}
+.popup_news_card {
     width: 650rpx;
-    height: 320rpx;
-    margin-top: 10rpx;
-    background-color: #fff;
-}
-
-
-/* 新闻资讯 */
-.news_container {
-    margin-top: 50rpx;
-}
-.news_box {
-    box-sizing: border-box;
-    width: 690rpx;
-    margin-bottom: 30rpx;
-    border-radius: 10rpx;
-    margin-top: 10rpx;
-    padding: 20rpx 20rpx;
-}
-.news_left {
-    width: 500rpx;
-    margin-right: 20rpx;
-}
-.news_item_box {
-    box-sizing: border-box;
-    width: 640rpx;
-    padding: 30rpx 20rpx;
-    height: 250rpx;
-}
-.news_coverImg {
-    width: 180rpx;
-    height: 180rpx;
-    border-radius: 10rpx;
+    height: 300rpx;
+    border-radius: 20rpx;
+    background-color: F2F5FC80;
+    margin-bottom: 40rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     overflow: hidden;
+}
+.popup_news_img {
+    width: 300rpx;
+    height: 300rpx;
+}
+.popup_news_content_box {
+    box-sizing: border-box;
+    width: 340rpx;
+    height: 300rpx;
+    padding: 20rpx 30rpx;
+}
+.popup_news_title {
+    height: 80rpx;
+    width: 280rpx;
+    line-height: 80rpx;
+    font-size: 35rpx;
+    color: #324eacbb;
+}
+.popup_news_content {
+    height: 120rpx;
+    width: 280rpx;
+    line-height: 40rpx;
+    font-size: 26rpx;
+    color: #0000006c;
+}
+.popup_news_date {
+    text-align: right;
+    height: 60rpx;
+    line-height: 60rpx;
+    color: #324eac30;
+    font-size: 24rpx;
 }

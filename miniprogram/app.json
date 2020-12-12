@@ -4,19 +4,21 @@
     "pages/commodity/commodity",
     "pages/index/index",
     "pages/introduction/introduction",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/news_detail/news_detail"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#679fe4",
     "navigationBarTitleText": "中帆东盛新材料",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "custom"
   },
   "tabBar": {
     "color": "#8a8a8a",
-    "selectedColor": "#679fe4",
-    "borderStyle": "black",
+    "selectedColor": "#92a5fe",
+    "borderStyle": "white",
     "list": [
       {
         "pagePath": "pages/homepage/homepage",
@@ -25,16 +27,16 @@
         "selectedIconPath": "/images/tabBar/home_on.png"
       },
       {
+        "pagePath": "pages/commodity/commodity",
+        "text": "产品列表",
+        "iconPath": "/images/tabBar/com_off.png",
+        "selectedIconPath": "/images/tabBar/com_on.png"
+      },
+      {
         "pagePath": "pages/introduction/introduction",
         "text": "企业资讯",
         "iconPath": "/images/tabBar/intro_off.png",
         "selectedIconPath": "/images/tabBar/intro_on.png"
-      },
-      {
-        "pagePath": "pages/commodity/commodity",
-        "text": "产品",
-        "iconPath": "/images/tabBar/com_off.png",
-        "selectedIconPath": "/images/tabBar/com_on.png"
       },
       {
         "pagePath": "pages/index/index",

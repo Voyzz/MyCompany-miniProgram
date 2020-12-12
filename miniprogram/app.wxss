@@ -1,4 +1,9 @@
 /**app.wxss**/
+/* 小模块背景色: #F2F5FC */
+/* 渐变色蓝: rgb(231, 237, 252) */
+/* 渐变色粉: #FF8691 */
+
+
 .container {
   display: flex;
   flex-direction: column;
@@ -16,7 +21,11 @@ page {
 /* common */
 /* 阴影 */
 .common_shadow {
-  box-shadow: 0rpx 5rpx 20rpx 2rpx #92a5fe30;
+  box-shadow: 5rpx 5rpx 20rpx 2rpx #92a5fe30;
+}
+
+.common_shadow2 {
+  box-shadow: 5rpx 5rpx 20rpx 2rpx #9e9e9e30;
 }
 
 /* 分割线 */
@@ -43,6 +52,12 @@ page {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: flex-start;
+}
+.flex_column_space {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: flex-start;
 }
 .flex_row_center {
@@ -76,7 +91,8 @@ page {
   line-height: 40rpx;
   font-size: 35rpx;
   font-weight: bolder;
-  color: rgb(66, 66, 66);
+  color: #324faca4;
+  margin-bottom: 5rpx;
 }
 .common_subtitle {
   height: 40rpx;
@@ -85,13 +101,20 @@ page {
   font-weight: bold;
   color: rgb(179, 179, 179);
   padding: 5rpx 0;
+  margin-bottom: 10rpx;
+}
+.common_content_box {
+  box-sizing: border-box;
+  width: 650rpx;
+  padding: 40rpx;
+  border-radius: 30rpx;
+  background-color: #F2F5FC05;
 }
 .common_content {
   line-height: 45rpx;
-  font-size: 25rpx;
-  font-weight: bold;
-  color: rgb(160, 160, 160);
-  padding: 10rpx 0 0 0;
+  font-size: 28rpx;
+  font-weight: light;
+  color: rgb(71, 71, 71);
 }
 .text_overflow_two{
   overflow:hidden;
@@ -105,5 +128,27 @@ page {
   text-overflow: ellipsis;
   display:-webkit-box;
   -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.text_of_lines1 {
+  overflow:hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.text_of_lines2 {
+  overflow:hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.text_of_lines3 {
+  overflow:hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }

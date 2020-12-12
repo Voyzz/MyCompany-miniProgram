@@ -3,20 +3,22 @@
   position: relative;
   height:100vh;
   width:100vw;
-  background-color: #679fe4;
+  background: linear-gradient(#587ffc, #587ffc00);
+  /* background-color: #679fe4; */
 }
 
 /* 搜索框 */
 .search_container {
   box-sizing: border-box;
   z-index: 9;
-  height:15vh;
+  height:25vh;
   width: 750rpx;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #679fe4;
+  /* background: linear-gradient(#679fe4, #fff); */
+  padding-top: 10vh;
 }
 .icon_left {
   margin-left: 30rpx;
@@ -45,7 +47,7 @@
 
 .list_container {
   width: 750rpx;
-  min-height: 85vh;
+  min-height: 75vh;
   background-color: #e5eaf4;
   border-top-left-radius: 40rpx;
   border-top-right-radius: 40rpx;

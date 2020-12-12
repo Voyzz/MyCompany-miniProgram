@@ -4,7 +4,7 @@
 
 <view class="detail_container">
   <!-- 头部背景图 -->
-  <template is="detail_header" data="{{prod_img}}"/>
+  <template is="detail_header" data="{{img_url:porduct_info.cover_img.img_url}}"/>
 
   <scroll-view 
     class="detail_box"
@@ -15,9 +15,9 @@
     enhanced="{{true}}"
     >
     <!-- 基本信息 -->
-    <template is="detail_info" data="{{prod_img}}"/>
+    <template is="detail_info" data="{{...porduct_info}}"/>
     <view class="extra_line" />
     <!-- 详细信息 -->
-    <template is="detail_tab_list"/>
+    <template is="detail_tab_list" data="{{...porduct_info}}"/>
   </scroll-view>
 </view>

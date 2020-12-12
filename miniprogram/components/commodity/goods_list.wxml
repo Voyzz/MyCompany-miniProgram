@@ -1,5 +1,5 @@
 <template name='commodity_list'>
-  <view class="list_container flex_row_start">
+  <view class="list_container flex_row_start common_shadow">
     <view class="sidebar_box common_shadow">
       <van-sidebar active-key="{{ activeKey }}" custom-class="sidebar">
         <van-sidebar-item title="标签名" custom-class="sidebar_item"/>

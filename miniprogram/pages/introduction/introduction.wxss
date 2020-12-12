@@ -1,30 +1,68 @@
 /* miniprogram/pages/introduction/introduction.wxss */
-
-/* 头图 */
-.intro_banner {
+.introduction_container {
     width: 750rpx;
-    height: 270rpx;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
 }
 
-/* 公司简介 */
-.intro_info_box {
-    box-sizing: border-box;
-    width: 690rpx;
-    padding: 10rpx;
-    margin-top: 20rpx;
+/* 背景渐变色 */
+.bg_color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(231, 237, 252, 0.4), #fff);
+    z-index: -1;
+}
+
+/* 头图 */
+.intro_banner_box {
+    width: 750rpx;
+    /* height: 320rpx; */
+    height: 250rpx;
+    border-bottom-left-radius: 80rpx;
+    /* border-bottom-right-radius: 100rpx; */
+}
+.intro_banner {
+    width: 750rpx;
+    height: 250rpx;
+    border-bottom-left-radius:80rpx;
+    /* border-bottom-right-radius: 100rpx; */
 }
 
 /* 公司地址 */
 .intro_address_box {
     box-sizing: border-box;
     width: 690rpx;
-    padding: 10rpx;
+    padding: 50rpx 20rpx;
     margin-top: 20rpx;
+    background-color: #fff;
+    border-radius: 40rpx;
+    margin-top: 50rpx;
 }
 .intro_address_map_box {
+    position: relative;
     margin-top: 20rpx;
-    width: 670rpx;
-    height: 300rpx;
-    border-radius: 10rpx;
+    width: 650rpx;
+    height: 500rpx;
+    border-radius: 30rpx;
     overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+/* 公司简介 */
+.intro_info_box {
+    box-sizing: border-box;
+    width: 690rpx;
+    padding: 50rpx 20rpx;
+    margin-top: 50rpx;
+    background-color: #fff;
+    border-radius: 40rpx;
+    margin-bottom: 30rpx;
 }

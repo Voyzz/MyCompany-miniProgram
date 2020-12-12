@@ -6,7 +6,7 @@
   <view class="content_box">
     <!-- 头像昵称 -->
     <view class="avatar_box">
-      <open-data type="userAvatarUrl" class="avatar"></open-data>
+      <open-data type="userAvatarUrl" class="avatar common_shadow"></open-data>
       <open-data type="userNickName" class="nickName"></open-data>
     </view>
   </view>

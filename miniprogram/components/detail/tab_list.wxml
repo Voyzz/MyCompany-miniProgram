@@ -5,12 +5,12 @@
   <view class="tabList_box common_shadow">
     <van-tabs color="#ff8691" line-width="250rpx" title-active-color="#000000aa" title-inactive-color="#858585">
       <van-tab title="产品详情" title-style="font-size:32rpx">
-        <template is="detail_tab_one_contant" />
-        <!-- <van-empty description="暂无信息" image="error"/> -->
+        <template is="detail_tab_one_contant" wx:if="{{pro_detail_list.length > 0}}" data="{{pro_detail_list}}"/>
+        <van-empty description="暂无信息" image="error" wx:if="{{pro_detail_list.length === 0}}"/>
       </van-tab>
       <van-tab title="产品图片" title-style="font-size:32rpx">
-        <template is="detail_tab_two_contant" />
-        <!-- <van-empty description="暂无图片" image="search"/> -->
+        <template is="detail_tab_two_contant" wx:if="{{pro_image_list.length > 0}}" data="{{pro_image_list}}"/>
+        <van-empty description="暂无图片" image="search" wx:if="{{pro_image_list.length === 0}}"/>
       </van-tab>
       <van-tab title="实时价格" title-style="font-size:32rpx">
         <van-empty>

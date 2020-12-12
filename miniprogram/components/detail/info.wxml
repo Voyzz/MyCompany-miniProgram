@@ -1,10 +1,10 @@
 <template name="detail_info">
   <view class="info_box common_shadow">
     <!-- 头像 -->
-    <image src="{{prod_img}}" class="detail_avatar common_shadow" />
+    <image src="{{cover_img.img_url}}" class="detail_avatar common_shadow" />
     <!-- icon -->
     <view class="info_line1 flex_row_end">
-      <view class="icon_box flex_row_space common_shadow">
+      <view class="icon_box flex_row_space common_shadow" wx:if="{{!is_favorite}}">
         <van-icon name="like" size="16px" custom-class="icon" color="white"/>
         <text class="icon_text">收藏</text>
       </view>
@@ -15,8 +15,8 @@
     </view>
     <!-- title -->
     <view class="info_line2">
-      <view class="info_title">商品标题</view>
-      <view class="info_subtitle">Production Subtilte</view>
+      <view class="info_title">{{title}}</view>
+      <view class="info_subtitle">substitle</view>
     </view>
   </view>
 </template>

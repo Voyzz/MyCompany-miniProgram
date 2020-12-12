@@ -1,22 +1,41 @@
-<!--miniprogram/pages/introduction/introduction.wxml-->
-<view class="introduction_container flex_column_box">
+<scroll-view
+    class="introduction_container"
+    scroll-x="false"
+    scroll-y="true"
+    show-scrollbar="{{false}}"
+    bounces="{{false}}"
+    enhanced="{{true}}"
+    enable-flex="{{true}}"
+    >
+    <!-- 背景渐变色 -->
+    <view class="bg_color" />
     <block wx:for="{{modules_data}}"  wx:for-item="module_item" wx:for-index="module_idx" wx:key="index">
         <!-- 头图 -->
-        <image wx:if="{{module_item.module_type == 'banner'}}" src="{{module_item.module_data.intro_banner}}" class="intro_banner" key="{{module_idx}}"></image>
+        <view class="intro_banner_box common_shadow" wx:if="{{module_item.module_type == 'banner'}}">
+            <image 
+                src="{{module_item.module_data.intro_banner}}" 
+                class="intro_banner" 
+                mode="aspectFill"
+                />
+        </view>
+        
         <!-- 公司地址 -->
-        <view class="intro_address_box flex_column_start" wx:if="{{module_item.module_type == 'location'}}">
+        <view class="intro_address_box common_shadow" wx:if="{{module_item.module_type == 'location'}}">
             <view class="common_title">{{module_item.module_data.title}}</view>
             <view class="common_subtitle">{{module_item.module_data.subtitle}}</view>
             <!-- 地图 -->
-            <view class="intro_address_map_box">
-                <map style="width: 100%;height: 100%;border-radius: 10rpx;" longitude="{{module_item.module_data.mapPoint.longitude}}" latitude="{{module_item.module_data.mapPoint.latitude}}" scale="16" markers="{{[module_item.module_data.mapPoint]}}"></map>
+            <view class="intro_address_map_box common_shadow2">
+                <map style="width: 650rpx;height: 500rpx;" longitude="{{module_item.module_data.mapPoint.longitude}}" latitude="{{module_item.module_data.mapPoint.latitude}}" scale="16" markers="{{[module_item.module_data.mapPoint]}}"></map>
             </view>
         </view>
         <!-- 公司简介 -->
-        <view wx:if="{{module_item.module_type == 'info'}}" class="intro_info_box flex_column_start">
+        <view wx:if="{{module_item.module_type == 'info'}}" class="intro_info_box common_shadow">
             <view class="common_title">{{module_item.module_data.title}}</view>
             <view class="common_subtitle">{{module_item.module_data.subtitle}}</view>
-            <text class="common_content">{{module_item.module_data.content}}</text>
+            <view class="common_content_box common_shadow2">
+                <text class="common_content">{{module_item.module_data.content}}</text>
+            </view>
         </view>
     </block>
-</view>
+    <view style="height:50rpx;width:750rpx"></view>
+</scroll-view>

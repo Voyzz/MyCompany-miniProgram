@@ -19,7 +19,7 @@ page {
 /* 背景图 */
 .mine_bg {
   width: 750rpx;
-  height: 300rpx;
+  height: 400rpx;
   position: absolute;
   left: 0;
   top: 0;
@@ -38,7 +38,7 @@ page {
 /* 头像 */
 .avatar_box {
   width: 750rpx;
-  height: 250rpx;
+  height: 350rpx;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
