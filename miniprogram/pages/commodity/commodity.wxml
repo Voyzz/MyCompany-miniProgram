@@ -3,6 +3,6 @@
 
 <view class="commodity_container flex_column_box">
     <template is="commodity_search" />
-    <template is="commodity_list" />
+    <template is="commodity_list" data="{{class_list,tags_list,pro_list,currSideIndex,currProNum}}"/>
     <!-- <canvas canvas-id="commodity_header" class="commodity_header"></canvas> -->
 </view>

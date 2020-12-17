@@ -66,6 +66,12 @@ page {
   justify-content: center;
   align-items: center;
 }
+.flex_row_start_center {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
 .flex_row_start {
   display: flex;
   flex-direction: row;

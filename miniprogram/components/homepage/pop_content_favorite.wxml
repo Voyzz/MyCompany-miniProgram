@@ -1,0 +1,16 @@
+<template name="pop_content_favorite">
+  <view class="popup_news_box">
+    <block wx:for="{{favo_pro_list}}" wx:key="index" wx:for-item="pro">
+      <view class="popup_news_card common_shadow" bindtap="click_favo_pro" data-pro_id="{{pro.pro_id}}">
+        <image src="{{pro.cover_img.img_url}}" mode="aspectFill" class="popup_news_img common_shadow2" />
+        <view class="popup_news_content_box">
+          <view class="popup_news_title text_of_lines1">{{pro.title}}</view>
+          <view class="popup_news_subtitle text_of_lines1">{{pro.substitle}}</view>
+          <block wx:for="{{pro.pro_detail_list}}" wx:for-item="detail" wx:key="index">
+            <view wx:if="{{!!detail.content}}" class="popup_news_content text_of_lines3">{{detail.content}}哈哈哈哈哈哈哈哈哈哈或或或哈哈哈哈哈哈哈哈哈哈或或或哈哈哈哈哈哈哈哈哈哈或或或哈哈哈哈哈哈哈哈哈哈或或或</view>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+</template>

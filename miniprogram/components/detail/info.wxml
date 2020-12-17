@@ -1,7 +1,7 @@
 <template name="detail_info">
   <view class="info_box common_shadow">
     <!-- 头像 -->
-    <image src="{{cover_img.img_url}}" class="detail_avatar common_shadow" />
+    <image src="{{cover_img.img_url}}" class="detail_avatar common_shadow" mode="aspectFill"/>
     <!-- icon -->
     <view class="info_line1 flex_row_end">
       <view class="icon_box flex_row_space common_shadow" wx:if="{{!is_favorite}}">
@@ -15,8 +15,22 @@
     </view>
     <!-- title -->
     <view class="info_line2">
-      <view class="info_title">{{title}}</view>
-      <view class="info_subtitle">substitle</view>
+      <view class="info_title text_of_lines1">{{title}}</view>
+      <view class="flex_row_space">
+        <view class="info_subtitle text_of_lines1">{{substitle}}</view>
+        <view class="tags_list">
+          <block wx:for="{{tags_list}}"  wx:for-item="tag_item" wx:for-index="tag_idx" wx:key="tag_idx">
+            <van-tag 
+              type="primary"
+              size="medium"
+              style="margin-left:5rpx"
+              color="{{tag_item === '热门' ? '#FF8691' : '#679fe4'}}"
+            >
+              {{tag_item}}
+            </van-tag>
+          </block>
+        </view>
+      </view>
     </view>
   </view>
 </template>

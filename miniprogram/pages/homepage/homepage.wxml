@@ -1,4 +1,6 @@
 <import src="/components/homepage/pop_content_news.wxml"/>
+<import src="/components/homepage/pop_content_contact.wxml"/>
+<import src="/components/homepage/pop_content_favorite.wxml"/>
 
 <view>
 <scroll-view 
@@ -13,6 +15,10 @@
         <!-- 波浪 -->
         <view class="wave">
             <image src="/images/homepage/wave.png" class="wave_img" />
+        </view>
+        <view class="search_box flex_row_center">
+            <image src="../../images/homepage/search.png" class="search_icon"/>
+            <view class="search_text">Search Your Product</view>
         </view>
         <!-- 背景渐变色 -->
         <view class="bg_color"></view>
@@ -35,11 +41,11 @@
                     </view>
                 </view>
                 <scroll-view class="goods_box" scroll-x="true" enable-flex="true" enable-flex="true">
-                    <block wx:for="{{module_item.module_data.card_list}}" wx:for-item="goods_item" wx:key="index">
-                        <view class="goods_item" style="margin-left:{{index === 0 ? '30rpx' : '0'}}">
-                            <image class="goods_img" src="{{goods_item.thumb}}"></image>
+                    <block wx:for="{{hot_pro_list}}" wx:for-item="goods_item" wx:key="index">
+                        <view class="goods_item" style="margin-left:{{index === 0 ? '30rpx' : '0'}}" bindtap="jump_to_detail" data-pro_id="{{goods_item.pro_id}}">
+                            <image class="goods_img" src="{{goods_item.cover_img.img_url}}" />
                             <view class="goods_title_shadow"></view>
-                            <view class="goods_title">{{goods_item.title}}</view>
+                            <view class="goods_title text_of_lines1">{{goods_item.title}}</view>
                         </view>
                     </block>
                 </scroll-view>
@@ -81,12 +87,8 @@
     >
     <view class="popup_content_container">
         <template is="pop_content_news" wx:if="{{curr_popup_content == 'news'}}" data="{{modules_data}}"/>
-        <view wx:if="{{curr_popup_content == 'contact'}}">
-            简介
-        </view>
-        <view wx:if="{{curr_popup_content == 'favorite'}}">
-            收藏
-        </view>
+        <template is="pop_content_contact" wx:if="{{curr_popup_content == 'contact'}}"/>
+        <template is="pop_content_favorite" wx:if="{{curr_popup_content == 'favorite'}}"  data="{{favo_pro_list}}"/>
     </view>
 </van-popup>
 </view>

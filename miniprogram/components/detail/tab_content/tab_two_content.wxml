@@ -6,7 +6,7 @@
           wx:if="{{item.is_show}}"
           width="670rpx"
           height="375rpx"
-          fit="fill"
+          fit="cover"
           lazy-load
           src="{{item.img_url}}"
         />

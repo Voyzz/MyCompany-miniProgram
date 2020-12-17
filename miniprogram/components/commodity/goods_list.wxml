@@ -1,71 +1,37 @@
 <template name='commodity_list'>
   <view class="list_container flex_row_start common_shadow">
     <view class="sidebar_box common_shadow">
-      <van-sidebar active-key="{{ activeKey }}" custom-class="sidebar">
-        <van-sidebar-item title="标签名" custom-class="sidebar_item"/>
-        <van-sidebar-item title="标签名" custom-class="sidebar_item"/>
-        <van-sidebar-item title="标签名" custom-class="sidebar_item"/>
+      <van-sidebar custom-class="sidebar" bind:change="onSideBarChange">
+        <van-sidebar-item title="全部" custom-class="sidebar_item" badge="{{currSideIndex == 0 ? currProNum : ''}}"/>
+        <block wx:for="{{class_list}}" wx:for-item="class_item" wx:for-index="class_idx" wx:key="class_idx">
+          <van-sidebar-item title="{{class_item}}" custom-class="sidebar_item" badge="{{currSideIndex == class_idx+1 ? currProNum : ''}}"/>
+        </block>
       </van-sidebar>
     </view>
     <scroll-view class="content_box" scroll-x="false" scroll-y="true">
-      <van-card
-        centered="true"
-        custom-class ="card_box"
-        desc="描述信息"
-        title="商品标题"
-        thumb="https://lg-7pc5j6x4-1257302752.cos.ap-shanghai.myqcloud.com/test.png"
-        thumb-link="/pages/detail/detail?_id=999"
-      />
-      <van-card
-        custom-class ="card_box"
-        num="2"
-        price="2.00"
-        desc="描述信息"
-        title="商品标题"
-        thumb="https://lg-7pc5j6x4-1257302752.cos.ap-shanghai.myqcloud.com/test.png"
-        thumb-link="/pages/detail/detail?_id=999"
-      />
-      <van-card
-        custom-class ="card_box"
-        num="2"
-        price="2.00"
-        desc="描述信息"
-        title="商品标题"
-        thumb="https://lg-7pc5j6x4-1257302752.cos.ap-shanghai.myqcloud.com/test.png"
-        thumb-link="/pages/detail/detail?_id=999"
-      />
-      <van-card
-        custom-class ="card_box"
-        num="2"
-        price="2.00"
-        desc="描述信息"
-        title="商品标题"
-        thumb="https://lg-7pc5j6x4-1257302752.cos.ap-shanghai.myqcloud.com/test.png"
-      />
-      <van-card
-        custom-class ="card_box"
-        num="2"
-        price="2.00"
-        desc="描述信息"
-        title="商品标题"
-        thumb="https://lg-7pc5j6x4-1257302752.cos.ap-shanghai.myqcloud.com/test.png"
-      />
-      <van-card
-        custom-class ="card_box"
-        num="2"
-        price="2.00"
-        desc="描述信息"
-        title="商品标题"
-        thumb="https://lg-7pc5j6x4-1257302752.cos.ap-shanghai.myqcloud.com/test.png"
-      />
-      <van-card
-        custom-class ="card_box"
-        num="2"
-        price="2.00"
-        desc="描述信息"
-        title="商品标题"
-        thumb="https://lg-7pc5j6x4-1257302752.cos.ap-shanghai.myqcloud.com/test.png"
-      />
+      <view style="height:35rpx;width:100rpx"></view>
+      <block wx:for="{{pro_list}}" wx:for-item="pro_item" wx:for-index="pro_idx" wx:key="pro_idx">
+        <view class="card_box" bindtap="jump_to_detail" data-pro_id="{{pro_item.pro_id}}" wx:if="{{pro_item.is_show}}">
+          <image src="{{pro_item.cover_img.img_url}}" class="pro_img" mode="aspectFill"/>
+          <view class="pro_content flex_column_space">
+            <view class="pro_title text_of_lines1">{{pro_item.title}}</view>
+            <view class="pro_subtitle text_of_lines1">{{pro_item.substitle}}</view>
+            <view class="flex_row_start_center">
+              <block wx:for="{{pro_item.tags_list}}" wx:for-item="tag_item" wx:for-index="tag_idx" wx:key="tag_idx">
+                <van-tag 
+                  type="primary"
+                  size="medium"
+                  class="tag_icon"
+                  color="{{tag_item === '热门' ? '#FF8691' : '#679fe4'}}"
+                >
+                  {{tag_item}}
+                </van-tag>
+              </block>
+            </view>
+          </view>
+        </view>
+      </block>
+      <view style="height:100rpx;width:100rpx"></view>
     </scroll-view>
   </view>
 </template>

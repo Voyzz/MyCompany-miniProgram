@@ -47,7 +47,7 @@
 
 .list_container {
   width: 750rpx;
-  min-height: 75vh;
+  height: 80vh;
   background-color: #e5eaf4;
   border-top-left-radius: 40rpx;
   border-top-right-radius: 40rpx;
@@ -82,16 +82,47 @@
 
 /* 内容 */
 .content_box {
+  box-sizing: border-box;
   width: 570rpx;
   /* min-height: 85vh; */
-  height: 85vh;
-  padding-top: 20rpx;
+  height: 80vh;
   padding-left: 25rpx;
-  padding-bottom: 140rpx;
 }
 .card_box {
   width: 520rpx;
-  border-radius: 20rpx;
-  margin-bottom: 25rpx;
+  border-radius: 10rpx;
+  margin-bottom: 35rpx;
   box-shadow: 0rpx 5rpx 20rpx 2rpx #92a5fe30;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.63);
+}
+.pro_img {
+  width: 220rpx;
+  height: 220rpx;
+  box-shadow: 0rpx 5rpx 20rpx 2rpx rgb(182, 182, 182);
+  border-radius: 5rpx;
+}
+.pro_content {
+  box-sizing: border-box;
+  width: 300rpx;
+  height: 220rpx;
+  padding: 20rpx;
+}
+.pro_title {
+  font-size: 32rpx;
+  color:#666;
+  font-weight: 500;
+}
+.pro_subtitle {
+  font-size: 28rpx;
+  color:#999;
+  font-weight: light;
+  margin-bottom: 30rpx;
+}
+.tag_icon{
+  margin-right: 5rpx;
 }

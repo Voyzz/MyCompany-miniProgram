@@ -2,7 +2,7 @@
   "miniprogramRoot": "miniprogram/",
   "cloudfunctionRoot": "cloudfunctions/",
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": true,
     "enhance": true,
     "postcss": true,
@@ -11,24 +11,25 @@
     "coverView": true,
     "nodeModules": true,
     "autoAudits": false,
+    "scopeDataCheck": false,
     "checkInvalidKey": true,
     "checkSiteMap": false,
     "uploadWithSourceMap": true,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
     },
+    "bundle": false,
     "useIsolateContext": true,
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
     "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
-    "minifyWXSS": true,
-    "useMultiFrameRuntime": false,
-    "useApiHook": true,
-    "bundle": false
+    "minifyWXSS": true
   },
   "appid": "wxec4444223a3590aa",
   "projectname": "myCompany_miniProgram",
@@ -36,12 +37,6 @@
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
-      "list": []
-    },
     "plugin": {
       "list": []
     },
@@ -88,10 +83,9 @@
           "scene": null
         },
         {
-          "id": -1,
           "name": "详情页",
           "pathName": "pages/detail/detail",
-          "query": "product_id=1227",
+          "query": "pro_id=pro-1608191231285",
           "scene": null
         },
         {

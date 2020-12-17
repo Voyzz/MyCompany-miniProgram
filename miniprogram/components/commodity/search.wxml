@@ -3,7 +3,7 @@
     <van-icon name="star-o" size="25px" custom-class="icon_left" color="white"/>
     <view class="search_box">
       <van-icon name="search" size="20px" custom-class="icon_right" color="white"/>
-      <input value="{{search_value}}" placeholder="请输入你想要的商品" placeholder-class="placeholder"/>
+      <input value="" placeholder="请输入你想要的商品" placeholder-class="placeholder" bindinput="on_input"/>
     </view>
     <van-icon name="arrow" size="25px" custom-class="icon_right" color="white"/>
   </view>

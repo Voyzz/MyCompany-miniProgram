@@ -35,6 +35,30 @@
     height: 7vh;
 }
 
+/* 搜索框 */
+.search_box {
+    position: absolute;
+    width: 650rpx;
+    height: 90rpx;
+    background-color: #f2f5fcdc;
+    left: 50rpx;
+    top: 24vh;
+    z-index: 999;
+    border-radius: 60rpx;
+    box-shadow: 5rpx 5rpx 20rpx 5rpx #92a6fe3b;
+}
+.search_icon {
+    position: absolute;
+    left: 50rpx;
+    top:20rpx;
+    width: 50rpx;
+    height: 50rpx;
+}
+.search_text{
+    font-size: 32rpx;
+    color:#b1b1b1c7
+}
+
 /* 背景渐变色 */
 .bg_color {
     position: absolute;
@@ -50,7 +74,7 @@
 /************ 上排模块 ************/
 .goods_container {
     position: relative;
-    margin-top: 0rpx;
+    margin-top: 1vh;
     margin-bottom: 20rpx;
     border-radius: 30rpx;
     overflow: hidden;
@@ -98,6 +122,7 @@
     border-radius: 20rpx;
     position: relative;
     box-shadow: 0rpx 5rpx 20rpx 2rpx #a4a6b130;
+    display: flex;
 }
 .goods_img {
     width: 18vh;
@@ -110,28 +135,29 @@
     left: 0;
     top: 0;
     right: 0;
-    background: linear-gradient(to top, #1e1e5d20, #1e1e5d00);
+    background: linear-gradient(to top, rgb(28, 28, 97), #1e1e5d00);
     border-bottom-left-radius: 20rpx;
     border-bottom-right-radius: 20rpx;
 }
 .goods_title {
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 18vh;
+    left: 1vh;
+    width: 16vh;
     height: 60rpx;
     text-align: center;
-    color: #324eac77;
+    color: #ffe4e6bb;
     font-weight: bold;
     font-size: 26rpx;
     line-height: 60rpx;
+    font-weight: light;
 }
 
 
 /************ 下排模块 ************/
 .bottom_line_container {
     position: relative;
-    margin-top: 2vh;
+    margin-top: 1vh;
     z-index: 99;
     width: 650rpx;
 }
@@ -194,6 +220,7 @@
 }
 
 /************ 弹出内容 ************/
+/* 新闻 */
 .popup_content_container {
     /* height: 50vh; */
     max-height: 60vh;
@@ -224,6 +251,14 @@
     height: 300rpx;
     padding: 20rpx 30rpx;
 }
+.popup_news_subtitle {
+    height: 30rpx;
+    width: 280rpx;
+    line-height: 30rpx;
+    font-size: 28rpx;
+    color: #d1d1d1;
+    margin-bottom: 15rpx;
+}
 .popup_news_title {
     height: 80rpx;
     width: 280rpx;
@@ -244,4 +279,29 @@
     line-height: 60rpx;
     color: #324eac30;
     font-size: 24rpx;
+}
+/* 联系方式 */
+.pop_content_contact_box {
+    box-sizing: border-box;
+    width: 750rpx;
+    height: 280rpx;
+    padding: 0 100rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.contant_icon_box{
+    box-sizing: border-box;
+}
+.contant_icon {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 120rpx;
+}
+.contant_text {
+    margin-top: 15rpx;
+    color:#333;
+    font-weight: bold;
+    font-size: 30rpx;
 }

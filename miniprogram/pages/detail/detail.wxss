@@ -88,6 +88,13 @@
   font-size: 32rpx;
   font-weight: light;
   color: #858585;
+  flex-shrink: 1;
+}
+.tags_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 /**************** 详细信息 ****************/

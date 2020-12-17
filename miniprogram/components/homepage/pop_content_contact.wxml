@@ -1,0 +1,16 @@
+<template name="pop_content_contact">
+  <view class="pop_content_contact_box">
+    <view class="contant_icon_box flex_column_center">
+      <image src="../../images/homepage/phone.png" class="contant_icon common_shaodow2" />
+      <view class="contant_text">电话</view>
+    </view>
+    <view class="contant_icon_box flex_column_center">
+      <image src="../../images/homepage/wechat.png" class="contant_icon common_shaodow2" />
+      <view class="contant_text">微信</view>
+    </view>
+    <view class="contant_icon_box flex_column_center">
+      <image src="../../images/homepage/email.png" class="contant_icon common_shaodow2" />
+      <view class="contant_text">邮件</view>
+    </view>
+  </view>
+</template>

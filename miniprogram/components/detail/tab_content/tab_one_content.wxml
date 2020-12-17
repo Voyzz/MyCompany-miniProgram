@@ -4,15 +4,25 @@
   
   <view class="detail_tab_one_contant_box">
     <block wx:for="{{pro_detail_list}}" wx:for-item="pro_item" wx:for-index="pro_index" wx:key="pro_index">
-      <view class="detail_params_box common_shadow">
+      <view class="detail_params_box common_shadow" wx:if="{{pro_item.content.length>0}}">
         <view class="tab_content_title">{{pro_item.name}}</view>
-        <van-cell wx:if="{{pro_item.content.length>0}}" title-width="0" value="这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介" border="{{ false }}"/>
-        <van-cell-group wx:if="{{pro_item.detail_obj.length>0}}">
+        <van-cell title-width="0" value="{{pro_item.content}}" border="{{ false }}"/>
+      </view>
+    </block>
+    <block wx:for="{{pro_detail_list}}" wx:for-item="pro_item" wx:for-index="pro_index" wx:key="pro_index">
+      <view class="detail_params_box common_shadow" wx:if="{{pro_item.detail_obj.length>0}}">
+        <view class="tab_content_title">{{pro_item.name}}</view>
+        <van-cell-group>
           <block wx:for="{{pro_item.detail_obj}}" wx:for-index="obj_idx" wx:key="obj_idx">
             <van-cell title="{{item.key}}" value="{{item.value}}"/>
           </block>
         </van-cell-group>
-        <van-cell-group wx:if="{{pro_item.detail_arr.length>0}}">
+      </view>
+    </block>
+    <block wx:for="{{pro_detail_list}}" wx:for-item="pro_item" wx:for-index="pro_index" wx:key="pro_index">
+      <view class="detail_params_box common_shadow" wx:if="{{pro_item.detail_arr.length>0}}">
+        <view class="tab_content_title">{{pro_item.name}}</view>
+        <van-cell-group>
           <block wx:for="{{pro_item.detail_arr}}" wx:for-index="obj_idx" wx:key="obj_idx">
             <van-cell title="" value="{{item}}"/>
           </block>
