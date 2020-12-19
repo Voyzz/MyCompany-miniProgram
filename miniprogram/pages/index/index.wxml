@@ -6,12 +6,12 @@
   <view class="content_box">
     <!-- 头像昵称 -->
     <view class="avatar_box">
-      <open-data type="userAvatarUrl" class="avatar common_shadow"></open-data>
+      <open-data type="userAvatarUrl" class="avatar common_shadow2"></open-data>
       <open-data type="userNickName" class="nickName"></open-data>
     </view>
   </view>
   <!-- 订单信息 -->
-  <view class="order_box common_shadow">
+  <view class="order_box common_shadow2">
     <view class="square_item_box">
       <image src="{{orderInfo.icon}}" class="square_icon"></image>
       <view class="square_title">{{orderInfo.title}}</view>
@@ -27,7 +27,7 @@
     </view>
   </view>
   <!-- 宫格 -->
-  <view class="mine_square common_shadow">
+  <view class="mine_square common_shadow2">
     <block wx:for="{{squareList}}" wx:for-item="squareItem" wx:key="index">
       <view class="square_item_box {{index == 0 ? '' : 'border_top'}}">
         <image src="{{squareItem.icon}}" class="square_icon"></image>

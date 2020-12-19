@@ -3,8 +3,8 @@
     <van-icon name="star-o" size="25px" custom-class="icon_left" color="white"/>
     <view class="search_box">
       <van-icon name="search" size="20px" custom-class="icon_right" color="white"/>
-      <input value="" placeholder="请输入你想要的商品" placeholder-class="placeholder" bindinput="on_input"/>
+      <input value="{{search_value}}" placeholder="请输入您想搜索的产品" placeholder-class="placeholder" bindinput="on_input"/>
     </view>
-    <van-icon name="arrow" size="25px" custom-class="icon_right" color="white"/>
+    <van-icon name="replay" size="25px" custom-class="icon_right" color="white" bind:click="click_reset"/>
   </view>
 </template>

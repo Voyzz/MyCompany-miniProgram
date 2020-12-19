@@ -3,6 +3,10 @@
 <import src="/components/homepage/pop_content_favorite.wxml"/>
 
 <view>
+<!-- Loading -->
+<view class="loading_view" wx:if="{{is_loading}}">
+    <van-loading size="24px" color="#1989fa"type="spinner" />
+</view>
 <scroll-view 
     class="homepage_box"
     scroll-x="false" 
@@ -16,9 +20,10 @@
         <view class="wave">
             <image src="/images/homepage/wave.png" class="wave_img" />
         </view>
-        <view class="search_box flex_row_center">
+        <!-- 搜索 -->
+        <view class="search_box flex_row_center common_shadow" bindtap="jump_to_pro_list">
             <image src="../../images/homepage/search.png" class="search_icon"/>
-            <view class="search_text">Search Your Product</view>
+            <view class="search_text">Search For Products</view>
         </view>
         <!-- 背景渐变色 -->
         <view class="bg_color"></view>
@@ -91,4 +96,5 @@
         <template is="pop_content_favorite" wx:if="{{curr_popup_content == 'favorite'}}"  data="{{favo_pro_list}}"/>
     </view>
 </van-popup>
+
 </view>

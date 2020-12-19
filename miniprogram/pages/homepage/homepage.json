@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "van-popup": "@vant/weapp/popup/index"
+    "van-popup": "@vant/weapp/popup/index",
+    "van-loading": "@vant/weapp/loading/index"
   },
   "disableScroll": true
 }

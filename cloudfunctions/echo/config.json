@@ -1,5 +1,7 @@
 {
   "permissions": {
-    "openapi": []
+    "openapi": [
+      "customerServiceMessage.send"
+    ]
   }
 }

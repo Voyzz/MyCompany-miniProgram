@@ -19,7 +19,7 @@ Page({
           icon:'logistics',
           title:"进行中",
           jumpUrl:'',
-          info:"9"
+          info:""
         },
         {
           icon:'completed',
@@ -31,7 +31,7 @@ Page({
           icon:'failure',
           title:"已取消",
           jumpUrl:'',
-          info:"2"
+          info:""
         }
       ]
     },

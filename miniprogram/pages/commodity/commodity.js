@@ -6,13 +6,19 @@ Page({
     pro_list:[],
     currClass:'全部',
     currSideIndex:0,
-    currProNum:''
+    currProNum:'',
+    is_loading:true,
+    search_value:'',
   },
 
   onLoad: function (options) {
     this.fetch_pro_list({
       is_basic:true
     },true)
+  },
+
+  onHide: function(){
+    this.click_reset();
   },
 
   // 请求接口
@@ -32,7 +38,7 @@ Page({
           const {data} = res;
           let _tags_list = [],_class_list=[];
 
-          console.log(data);
+          // console.log(data);
           if(init){
             data.forEach((item,idx) => {
               _tags_list = _tags_list.concat(item.tags_list);
@@ -54,7 +60,8 @@ Page({
 
           _this.setData({
             pro_list:_data,
-            currProNum:_data.length
+            currProNum:_data.length,
+            is_loading:false
           })
         }
       }
@@ -74,6 +81,16 @@ Page({
       },false)
     }
     
+  },
+
+  // 重置搜索词
+  click_reset : function() {
+    this.setData({
+      search_value:''
+    });
+    this.fetch_pro_list({
+      is_basic:true
+    },true)
   },
 
   // 跳转详情页
@@ -98,8 +115,6 @@ Page({
     _this.setData({
       currSideIndex:side_idx
     });
-
-    console.log(this.data.currSideIndex === 0);
 
     if(side_idx === 0){
       _this.fetch_pro_list({},false)

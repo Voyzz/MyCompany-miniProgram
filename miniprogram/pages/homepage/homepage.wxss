@@ -40,12 +40,11 @@
     position: absolute;
     width: 650rpx;
     height: 90rpx;
-    background-color: #f2f5fcdc;
+    background-color: #f2f5fcbe;
     left: 50rpx;
-    top: 24vh;
-    z-index: 999;
-    border-radius: 60rpx;
-    box-shadow: 5rpx 5rpx 20rpx 5rpx #92a6fe3b;
+    top: 23vh;
+    z-index: 100;
+    border-radius: 100rpx;
 }
 .search_icon {
     position: absolute;
@@ -56,7 +55,8 @@
 }
 .search_text{
     font-size: 32rpx;
-    color:#b1b1b1c7
+    color:#79a0fce8;
+    font-weight: lighter;
 }
 
 /* 背景渐变色 */
@@ -67,7 +67,7 @@
     width: 750rpx;
     height: 70vh;
     z-index: 90;
-    background: linear-gradient(to top, rgba(231, 237, 252, 0.5), #fff); 
+    /* background: linear-gradient(to top, rgba(231, 237, 252, 0.5), #fff);  */
 }
 
 
@@ -146,7 +146,7 @@
     width: 16vh;
     height: 60rpx;
     text-align: center;
-    color: #ffe4e6bb;
+    color: #cdd6fdb0;
     font-weight: bold;
     font-size: 26rpx;
     line-height: 60rpx;
@@ -293,6 +293,7 @@
 }
 .contant_icon_box{
     box-sizing: border-box;
+    position: relative;
 }
 .contant_icon {
     width: 120rpx;
@@ -304,4 +305,24 @@
     color:#333;
     font-weight: bold;
     font-size: 30rpx;
+}
+.contant_btn {
+    width: 100rpx;
+    height: 100rpx;
+    background-color: #00000000;
+    position: absolute;
+    left: 10rpx;
+    top:10rpx;
+    padding:0;
+    margin: 0;
+    border-radius: 100rpx;
+}
+
+.getuserinfo {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 750rpx;
+    height: 300rpx;
+    z-index: 999;
 }

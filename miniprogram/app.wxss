@@ -21,11 +21,11 @@ page {
 /* common */
 /* 阴影 */
 .common_shadow {
-  box-shadow: 5rpx 5rpx 20rpx 2rpx #92a5fe30;
+  box-shadow: 0 0 30rpx 5rpx #92a5fe50;
 }
 
 .common_shadow2 {
-  box-shadow: 5rpx 5rpx 20rpx 2rpx #9e9e9e30;
+  box-shadow: 0 0 20rpx 5rpx #9e9e9e30;
 }
 
 /* 分割线 */
@@ -157,4 +157,18 @@ page {
   display:-webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+
+/* Loading */
+.loading_view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

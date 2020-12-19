@@ -1,7 +1,8 @@
 // miniprogram/pages/introduction/introduction.js
 Page({
   data: {
-    modules_data:[]
+    modules_data:[],
+    is_loading:true
   },
   onLoad: function (options) {
     const { baseUrl } = getApp();
@@ -21,7 +22,8 @@ Page({
         console.log(res);
         if(res.statusCode == 200){
           _this.setData({
-            modules_data:res.data
+            modules_data:res.data,
+            is_loading:false
           })
         }
       }

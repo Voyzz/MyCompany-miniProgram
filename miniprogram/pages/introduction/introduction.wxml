@@ -7,6 +7,10 @@
     enhanced="{{true}}"
     enable-flex="{{true}}"
     >
+    <!-- Loading -->
+    <view class="loading_view" wx:if="{{is_loading}}">
+        <van-loading size="24px" color="#1989fa"type="spinner" />
+    </view>
     <!-- 背景渐变色 -->
     <view class="bg_color" />
     <block wx:for="{{modules_data}}"  wx:for-item="module_item" wx:for-index="module_idx" wx:key="index">

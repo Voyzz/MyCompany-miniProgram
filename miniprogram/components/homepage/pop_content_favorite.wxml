@@ -7,7 +7,7 @@
           <view class="popup_news_title text_of_lines1">{{pro.title}}</view>
           <view class="popup_news_subtitle text_of_lines1">{{pro.substitle}}</view>
           <block wx:for="{{pro.pro_detail_list}}" wx:for-item="detail" wx:key="index">
-            <view wx:if="{{!!detail.content}}" class="popup_news_content text_of_lines3">{{detail.content}}哈哈哈哈哈哈哈哈哈哈或或或哈哈哈哈哈哈哈哈哈哈或或或哈哈哈哈哈哈哈哈哈哈或或或哈哈哈哈哈哈哈哈哈哈或或或</view>
+            <view wx:if="{{!!detail.content}}" class="popup_news_content text_of_lines3">{{detail.content}}</view>
           </block>
         </view>
       </view>
