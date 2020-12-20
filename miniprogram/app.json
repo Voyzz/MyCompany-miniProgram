@@ -48,7 +48,9 @@
   },
   "usingComponents": {
     "van-loading": "@vant/weapp/loading/index",
-    "van-popup": "@vant/weapp/popup/index"
+    "van-popup": "@vant/weapp/popup/index",
+    "user-info":"/components/userInfo/userInfo",
+    "van-field": "@vant/weapp/field/index"
   },
   "sitemapLocation": "sitemap.json"
 }

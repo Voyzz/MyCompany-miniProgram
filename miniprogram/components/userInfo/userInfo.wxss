@@ -1,0 +1,123 @@
+.user_info_container {
+  box-sizing: border-box;
+  /* width: 750rpx;
+  height: 500rpx; */
+  /* padding: 50rpx; */
+}
+
+/* 用户选择 */
+.choose_box {
+  position: relative;
+  width:750rpx;
+  height: 400rpx;
+}
+.choose_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.choose_icon {
+  position: absolute;
+  width: 240rpx;
+  height: 240rpx;
+  left: 0;
+  top:0;
+  opacity: 0.3;
+}
+.choose_title {
+  font-size: 48rpx;
+  color:rgba(85, 85, 85, 0.781);
+  margin-top: 100rpx;
+}
+.choose_subtitle {
+  font-size: 28rpx;
+  color:rgba(141, 141, 141, 0.507);
+  margin-top: 15rpx;
+}
+.button_box {
+  margin-top: 50rpx;
+  width: 550rpx;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.no_button {
+  width: 250rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #FF8691;
+  border-radius: 5rpx;
+  border: #FF8691 solid 2rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+.yes_button {
+  width: 250rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #fff;
+  border-radius: 5rpx;
+  text-align: center;
+  font-size: 30rpx;
+  background-color: rgb(138, 171, 255);
+}
+
+/* 信息录入窗口 */
+.form_box {
+  position: relative;
+  box-sizing: border-box;
+  width:750rpx;
+  height: 550rpx;
+  padding: 60rpx 50rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* 联系方式 */
+.pop_content_contact_box {
+  box-sizing: border-box;
+  width: 750rpx;
+  height: 280rpx;
+  padding: 0 100rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.contant_icon_box{
+  box-sizing: border-box;
+  position: relative;
+}
+.contant_icon {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 120rpx;
+}
+.contant_text {
+  margin-top: 15rpx;
+  color:#333;
+  font-weight: bold;
+  font-size: 30rpx;
+}
+.contant_btn {
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #00000000;
+  position: absolute;
+  left: 10rpx;
+  top:10rpx;
+  padding:0;
+  margin: 0;
+  border-radius: 100rpx;
+}
+.flex_column_center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

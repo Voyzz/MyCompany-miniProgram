@@ -29,7 +29,7 @@
   <!-- 宫格 -->
   <view class="mine_square common_shadow2">
     <block wx:for="{{squareList}}" wx:for-item="squareItem" wx:key="index">
-      <view class="square_item_box {{index == 0 ? '' : 'border_top'}}">
+      <view class="square_item_box {{index == 0 ? '' : 'border_top'}}" bindtap="click_icon" data-type="{{squareItem.title}}">
         <image src="{{squareItem.icon}}" class="square_icon"></image>
         <view class="square_title">{{squareItem.title}}</view>
         <image src="/images/icons/arrow_right.png" class="arrow"></image>
@@ -38,5 +38,17 @@
   </view>
   <!-- 署名 -->
   <view class="myName flex_row_center">Powered By Voyz Shen</view>
+  <van-popup 
+      show="{{ show_popup }}"
+      bind:close="onClose"
+      round
+      position="bottom"
+      duration="400"
+      >
+      <view class="popup_content_container">
+          <template is="pop_content_favorite" wx:if="{{curr_popup_content == 'favorite'}}"  data="{{favo_pro_list}}"/>
+          <user-info wx:if="{{curr_popup_content == 'contact'}}"/>
+      </view>
+  </van-popup>
 </view>
 </scroll-view>

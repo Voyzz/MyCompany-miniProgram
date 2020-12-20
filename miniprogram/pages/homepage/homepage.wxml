@@ -1,6 +1,6 @@
 <import src="/components/homepage/pop_content_news.wxml"/>
-<import src="/components/homepage/pop_content_contact.wxml"/>
-<import src="/components/homepage/pop_content_favorite.wxml"/>
+<import src="/components/common/pop_content_contact.wxml"/>
+<import src="/components/common/pop_content_favorite.wxml"/>
 
 <view>
 <!-- Loading -->
@@ -92,8 +92,9 @@
     >
     <view class="popup_content_container">
         <template is="pop_content_news" wx:if="{{curr_popup_content == 'news'}}" data="{{modules_data}}"/>
-        <template is="pop_content_contact" wx:if="{{curr_popup_content == 'contact'}}"/>
+        <!-- <template is="pop_content_contact" wx:if="{{curr_popup_content == 'contact'}}"/> -->
         <template is="pop_content_favorite" wx:if="{{curr_popup_content == 'favorite'}}"  data="{{favo_pro_list}}"/>
+        <user-info wx:if="{{curr_popup_content == 'contact'}}"/>
     </view>
 </van-popup>
 

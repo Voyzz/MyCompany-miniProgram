@@ -1,0 +1,77 @@
+<view class="user_info_container">
+  <!-- 询问窗口 -->
+  <view class="choose_box" wx:if="{{show_choose}}">
+    <image src="/images/userInfo/choose.png" class="choose_icon"/>
+    <view class="choose_title">可否留下您的联系方式?</view>
+    <view class="choose_subtitle">以便我们能够更好的为您服务</view>
+    <view class="button_box">
+      <view class="no_button" bindtap="choose_no">跳过</view>
+      <view class="yes_button" bindtap="choose_yes">确认</view>
+    </view>
+  </view>
+  <!-- 信息录入窗口 -->
+  <view class="form_box" wx:if="{{show_form}}">
+    <van-cell-group>
+      <van-field
+        value="{{ name }}"
+        clearable
+        label="称呼"
+        left-icon="smile-o"
+        placeholder="(如: 张先生)"
+        input-align="right"
+        bind:change="form_name"
+      />
+      <van-field
+        model:value="{{ phone }}"
+        clearable
+        label="手机"
+        left-icon="phone-o"
+        placeholder="您的手机号码"
+        input-align="right"
+        bind:change="form_phone"
+        type="digit"
+      />
+      <van-field
+        model:value="{{ compony }}"
+        clearable
+        label="单位"
+        left-icon="newspaper-o"
+        placeholder="您的所在单位"
+        input-align="right"
+        bind:change="form_compony"
+      />
+      <van-field
+        model:value="{{ location }}"
+        clearable
+        label="城市"
+        left-icon="location-o"
+        placeholder="您的所在城市"
+        border="{{ false }}"
+        input-align="right"
+        bind:change="form_location"
+      />
+    </van-cell-group>
+    <view class="button_box">
+      <view class="no_button" bindtap="form_back">返回</view>
+      <view class="yes_button" bindtap="form_submit">确认</view>
+    </view>
+  </view>
+
+  <view class="contact_box" wx:if="{{show_contact}}">
+    <view class="pop_content_contact_box">
+      <view class="contant_icon_box flex_column_center">
+        <image src="../../images/homepage/phone.png" class="contant_icon common_shaodow2" bindtap="phone_call"/>
+        <view class="contant_text">电话</view>
+      </view>
+      <view class="contant_icon_box flex_column_center">
+        <image src="../../images/homepage/wechat.png" class="contant_icon common_shaodow2" />
+        <view class="contant_text">微信</view>
+        <button open-type="contact" class="contant_btn"></button>  
+      </view>
+      <view class="contant_icon_box flex_column_center">
+        <image src="../../images/homepage/email.png" class="contant_icon common_shaodow2" bindtap="copy_email"/>
+        <view class="contant_text">邮箱</view>
+      </view>
+    </view>
+  </view>
+</view>

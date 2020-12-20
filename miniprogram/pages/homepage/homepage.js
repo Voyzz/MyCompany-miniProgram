@@ -15,7 +15,15 @@ Page({
     const { baseUrl } = getApp();
     const _this = this;
 
-    // 请求接口
+
+    wx.cloud.callFunction({
+      name: 'login',
+      complete: res => {
+        console.log(res.result);
+      }
+    })
+
+    // 模块列表
     wx.request({
       url: `${baseUrl}/homepageModules`,
       method: "POST",
@@ -26,7 +34,8 @@ Page({
         // console.log(res);
         if(res.statusCode == 200){
           _this.setData({
-            modules_data:res.data
+            modules_data:res.data,
+            is_loading:false
           })
         }
       }
@@ -42,8 +51,7 @@ Page({
       success(res){
         if(res.statusCode == 200){
           _this.setData({
-            hot_pro_list:res.data,
-            is_loading:false
+            hot_pro_list:res.data
           })
           // console.log(res.data)
         }
@@ -59,7 +67,6 @@ Page({
     })
   },
 
-  // ************ 控制popup ************
   // 打开新闻popup
   show_news_popup : function() {
     this.setData({
@@ -108,6 +115,7 @@ Page({
     })
   },
 
+  // 跳转到产品详情
   jump_to_pro_list: function () {
     wx.switchTab({
       url: '/pages/commodity/commodity',
@@ -167,7 +175,7 @@ Page({
   onShareAppMessage: function () {
     return {
       path: 'pages/homepage/homepage' ,
-      imageUrl:'https://lg-7pc5j6x4-1257302752.cos.ap-shanghai.myqcloud.com/logo.jpg',
+      imageUrl:'https://lg-7pc5j6x4-1257302752.cos.ap-shanghai.myqcloud.com/logo3.jpg',
       success: function (res) {
         console.log('转发成功')
       },

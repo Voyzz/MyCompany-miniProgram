@@ -3,6 +3,9 @@ const app = getApp()
 
 Page({
   data: {
+    show_popup:false,
+    curr_popup_content:'',
+    favo_pro_list:[],
     orderInfo:{
       icon:"/images/icons/market.png",
       title:"我的订单",
@@ -66,6 +69,24 @@ Page({
 
   onLoad: function() {
     
-  }
+  },
+
+  click_icon:function(e){
+    switch (e.currentTarget.dataset.type){
+      case '联系我们':
+        this.setData({
+          show_popup:true,
+          curr_popup_content:'contact'
+        })
+        break
+    }
+  },
+
+  // 关闭popup
+  onClose:function (params) {
+    this.setData({
+      show_popup:false,
+    })
+  },
 
 })
