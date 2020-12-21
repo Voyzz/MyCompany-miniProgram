@@ -2,7 +2,7 @@
   "miniprogramRoot": "miniprogram/",
   "cloudfunctionRoot": "cloudfunctions/",
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": true,
     "enhance": true,
     "postcss": true,
@@ -86,7 +86,7 @@
         {
           "name": "详情页",
           "pathName": "pages/detail/detail",
-          "query": "pro_id=pro-1608191231285",
+          "query": "pro_id=pro-1607915841606",
           "scene": null
         },
         {

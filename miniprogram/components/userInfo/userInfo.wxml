@@ -17,7 +17,7 @@
         clearable
         label="称呼"
         left-icon="smile-o"
-        placeholder="(如: 张先生)"
+        placeholder="{{!!name ? name : '(如: 张先生)'}}"
         input-align="right"
         bind:change="form_name"
       />
@@ -26,7 +26,7 @@
         clearable
         label="手机"
         left-icon="phone-o"
-        placeholder="您的手机号码"
+        placeholder="{{!!phone ? phone : '您的手机号码'}}"
         input-align="right"
         bind:change="form_phone"
         type="digit"
@@ -36,7 +36,7 @@
         clearable
         label="单位"
         left-icon="newspaper-o"
-        placeholder="您的所在单位"
+        placeholder="{{!!compony ? compony : '您的所在单位'}}"
         input-align="right"
         bind:change="form_compony"
       />
@@ -45,15 +45,17 @@
         clearable
         label="城市"
         left-icon="location-o"
-        placeholder="您的所在城市"
+        placeholder="{{!!location ? location : '您的所在城市'}}"
         border="{{ false }}"
         input-align="right"
         bind:change="form_location"
       />
     </van-cell-group>
     <view class="button_box">
-      <view class="no_button" bindtap="form_back">返回</view>
-      <view class="yes_button" bindtap="form_submit">确认</view>
+      <view class="no_button" bindtap="form_back" wx:if="{{type == 'contact'}}">返回</view>
+      <view class="yes_button" bindtap="form_submit" wx:if="{{type == 'contact'}}">确认</view>
+      <view class="no_button" wx:if="{{type == 'info'}}" style="border-width:0"></view>
+      <view class="yes_button" bindtap="form_update" wx:if="{{type == 'info'}}">{{!!name ? '修改' : '添加'}}</view>
     </view>
   </view>
 
@@ -65,7 +67,7 @@
       </view>
       <view class="contant_icon_box flex_column_center">
         <image src="../../images/homepage/wechat.png" class="contant_icon common_shaodow2" />
-        <view class="contant_text">微信</view>
+        <view class="contant_text">客服</view>
         <button open-type="contact" class="contant_btn"></button>  
       </view>
       <view class="contant_icon_box flex_column_center">

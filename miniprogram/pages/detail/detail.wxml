@@ -15,7 +15,7 @@
     enhanced="{{true}}"
     >
     <!-- 基本信息 -->
-    <template is="detail_info" data="{{...porduct_info}}"/>
+    <template is="detail_info" data="{{...porduct_info,is_favorite}}"/>
     <view class="extra_line" />
     <!-- 详细信息 -->
     <template is="detail_tab_list" data="{{...porduct_info}}"/>

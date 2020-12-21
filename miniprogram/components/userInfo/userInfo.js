@@ -1,16 +1,64 @@
 // components/userInfo/userInfo.js
 Component({
   properties: {
+    show_choose:{
+      type:Boolean,
+      value:true
+    },
+    show_form:{
+      type:Boolean,
+      value:false
+    },
+    show_contact:{
+      type:Boolean,
+      value:false
+    },
+    type:{
+      type:String,
+      value:'contact'
+    },
   },
 
   data: {
-    show_choose:true,
-    show_form:false,
-    show_contact:false,
     name:'',
     phone:'',
     compony:'',
     location:'',
+  },
+
+  lifetimes: {
+    // 生命周期函数
+    attached: function () { 
+      const _this = this;
+      const { baseUrl,openid } = getApp();
+
+       // 获取用户信息
+      wx.request({
+        url: `${baseUrl}/getUserInfo`,
+        method: "POST",
+        data:{
+          openid
+        },
+        success(res){
+          const { name,phone,compony,location } = res.data;
+          if(!!name && !!phone && _this.data.type == 'contact'){
+            _this.setData({
+              show_choose:false,
+              show_form:false,
+              show_contact:true
+            })
+          }else if( _this.data.type == 'info'){
+            _this.setData({
+              show_choose:false,
+              show_form:true,
+              show_contact:false,
+              name,phone,compony,location
+            })
+          }
+
+        }
+      })
+    },
   },
 
   methods: {
@@ -52,14 +100,65 @@ Component({
       })
     },
 
-    // 提交表单
-    form_submit: function(){
-      const { name,phone,compony,location } = this.data;
+    // 跳过表单
+    form_back: function() {
       this.setData({
         show_choose:false,
         show_form:false,
         show_contact:true,
       })
+    },
+
+    // 用户信息录入
+    form_submit: function(){
+      const { name,phone,compony,location } = this.data;
+      const { baseUrl,openid,appid } = getApp();
+
+      if(!!openid){
+        this.setData({
+          show_choose:false,
+          show_form:false,
+          show_contact:true,
+        })
+
+        wx.request({
+          url: `${baseUrl}/addUserInfo`,
+          method: "POST",
+          data:{
+            openid,
+            appid,
+            name,
+            phone,
+            compony,
+            location
+          },
+          success(res){
+            console.log(res);
+          }
+        })
+      }
+    },
+
+    // 更新用户信息
+    form_update:function(){
+      const { name,phone,compony,location } = this.data;
+      const { baseUrl,openid,appid } = getApp();
+
+      wx.request({
+        url: `${baseUrl}/updateUserInfo`,
+        method: "POST",
+        data:{
+          openid,
+          appid,
+          name,
+          phone,
+          compony,
+          location
+        },
+        success(res){
+          console.log(res);
+        }
+      })      
     },
     
     // 拨打电话

@@ -7,21 +7,12 @@ Page({
     show_popup:false,
     curr_popup_content:'',
     hot_pro_list:[],
-    favo_pro_list:[],
     is_loading:true
   },
 
   onLoad: function (options) {
     const { baseUrl } = getApp();
     const _this = this;
-
-
-    wx.cloud.callFunction({
-      name: 'login',
-      complete: res => {
-        console.log(res.result);
-      }
-    })
 
     // 模块列表
     wx.request({
@@ -77,26 +68,11 @@ Page({
 
   // 打开收藏popup
   show_favorite_popup : function() {
-    const { baseUrl } = getApp();
     const _this = this;
 
-    // 收藏产品列表
-    wx.request({
-      url: `${baseUrl}/getProductList`,
-      method: "POST",
-      data:{
-        tags_reg:'热门'
-      },
-      success(res){
-        if(res.statusCode == 200){
-          _this.setData({
-            favo_pro_list:res.data,
-            curr_popup_content:'favorite',
-            show_popup:true
-          })
-          console.log(res.data)
-        }
-      }
+    _this.setData({
+      curr_popup_content:'favorite',
+      show_popup:true
     })
   },
 
@@ -127,14 +103,6 @@ Page({
     const {news_data} =  params.currentTarget.dataset;
     wx.navigateTo({
       url: '/pages/detail/detail?news_data='+JSON.stringify(news_data),
-    })
-  },
-
-  // 点击收藏产品
-  click_favo_pro: function (params) {
-    const {pro_id} =  params.currentTarget.dataset;
-    wx.navigateTo({
-      url: '/pages/detail/detail?pro_id='+pro_id,
     })
   },
 

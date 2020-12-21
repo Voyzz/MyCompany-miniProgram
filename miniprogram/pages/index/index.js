@@ -73,6 +73,24 @@ Page({
 
   click_icon:function(e){
     switch (e.currentTarget.dataset.type){
+      case '我的收藏':
+        this.setData({
+          show_popup:true,
+          curr_popup_content:'favo'
+        })
+        break
+      case '浏览历史':
+        this.setData({
+          show_popup:true,
+          curr_popup_content:'history'
+        })
+        break
+      case '个人信息':
+        this.setData({
+          show_popup:true,
+          curr_popup_content:'info'
+        })
+        break
       case '联系我们':
         this.setData({
           show_popup:true,

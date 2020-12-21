@@ -48,6 +48,9 @@
       <view class="popup_content_container">
           <template is="pop_content_favorite" wx:if="{{curr_popup_content == 'favorite'}}"  data="{{favo_pro_list}}"/>
           <user-info wx:if="{{curr_popup_content == 'contact'}}"/>
+          <user-info wx:if="{{curr_popup_content == 'info'}}" type="info"/>
+          <pro-list wx:if="{{curr_popup_content == 'favo'}}" type="favo" />
+          <pro-list wx:if="{{curr_popup_content == 'history'}}" type="history" />
       </view>
   </van-popup>
 </view>
