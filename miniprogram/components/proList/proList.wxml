@@ -1,4 +1,8 @@
 <view class="popup_news_box">
+  <view class="title_box">
+    <image class="title_icon" src="{{'/images/common/' + (type == 'favo' ? 'favo_title' : 'history_title')  +'.png'}}"/>
+    <view class="title_text">{{type == 'favo' ? '我的收藏' : '浏览历史'}}</view>
+  </view>
   <block wx:for="{{pro_list}}" wx:key="index" wx:for-item="pro">
     <view class="popup_news_card common_shadow" bindtap="click_favo_pro" data-pro_id="{{pro.pro_id}}">
       <image src="{{pro.cover_img.img_url}}" mode="aspectFill" class="popup_news_img common_shadow2" />

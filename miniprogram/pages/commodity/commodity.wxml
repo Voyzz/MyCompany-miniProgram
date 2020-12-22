@@ -8,4 +8,15 @@
     </view>
     <template is="commodity_search" data="{{search_value}}"/>
     <template is="commodity_list" data="{{class_list,tags_list,pro_list,currSideIndex,currProNum}}"/>
+    <van-popup 
+        show="{{ show_popup }}"
+        bind:close="onClose"
+        round
+        position="bottom"
+        duration="400"
+        >
+        <view class="popup_content_container">
+            <pro-list type="favo" wx:if="{{show_popup}}"/>
+        </view>
+    </van-popup>
 </view>

@@ -1,6 +1,6 @@
 <template name='commodity_search'>
   <view class="search_container">
-    <van-icon name="star-o" size="25px" custom-class="icon_left" color="white"/>
+    <van-icon name="star-o" size="25px" custom-class="icon_left" color="white" bind:click="open_favo"/>
     <view class="search_box">
       <van-icon name="search" size="20px" custom-class="icon_right" color="white"/>
       <input value="{{search_value}}" placeholder="请输入您想搜索的产品" placeholder-class="placeholder" bindinput="on_input"/>

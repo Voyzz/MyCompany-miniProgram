@@ -61,7 +61,7 @@ Page({
       },
       {
         icon:"/images/icons/alert.png",
-        title:"最新动态",
+        title:"行业动态",
         jumpUrl:''
       },
     ]
@@ -95,6 +95,12 @@ Page({
         this.setData({
           show_popup:true,
           curr_popup_content:'contact'
+        })
+        break
+      case '行业动态':
+        this.setData({
+          show_popup:true,
+          curr_popup_content:'news'
         })
         break
     }

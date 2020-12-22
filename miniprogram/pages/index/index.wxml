@@ -51,6 +51,7 @@
           <user-info wx:if="{{curr_popup_content == 'info'}}" type="info"/>
           <pro-list wx:if="{{curr_popup_content == 'favo'}}" type="favo" />
           <pro-list wx:if="{{curr_popup_content == 'history'}}" type="history" />
+          <news-list wx:if="{{curr_popup_content == 'news'}}"/>
       </view>
   </van-popup>
 </view>

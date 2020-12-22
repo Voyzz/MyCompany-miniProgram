@@ -2,7 +2,7 @@
   "miniprogramRoot": "miniprogram/",
   "cloudfunctionRoot": "cloudfunctions/",
   "setting": {
-    "urlCheck": false,
+    "urlCheck": true,
     "es6": true,
     "enhance": true,
     "postcss": true,
@@ -86,14 +86,13 @@
         {
           "name": "详情页",
           "pathName": "pages/detail/detail",
-          "query": "pro_id=pro-1607915841606",
+          "query": "pro_id=pro-1608191231285",
           "scene": null
         },
         {
-          "id": -1,
           "name": "新闻详情页",
           "pathName": "pages/news_detail/news_detail",
-          "query": "",
+          "query": "news_data= {\"title\":\"这是新闻标题1\",\"coverImg\":\"https://lg-7pc5j6x4-1257302752.cos.ap-shanghai.myqcloud.com/test.png\",\"content\":\"这是新闻内容这是新闻内容，这是新闻内容这是新闻内容，这是新闻内容这是新闻内容。\",\"data\":\"2020-03-13\"}",
           "scene": null
         }
       ]

@@ -1,5 +1,3 @@
-<import src="/components/homepage/pop_content_news.wxml"/>
-
 <view>
 <!-- Loading -->
 <view class="loading_view" wx:if="{{is_loading}}">
@@ -89,7 +87,7 @@
     duration="400"
     >
     <view class="popup_content_container">
-        <template is="pop_content_news" wx:if="{{curr_popup_content == 'news'}}" data="{{modules_data}}"/>
+        <news-list wx:if="{{curr_popup_content == 'news'}}"/>
         <pro-list wx:if="{{curr_popup_content == 'favorite'}}" type="favo" />
         <user-info wx:if="{{curr_popup_content == 'contact'}}"/>
     </view>

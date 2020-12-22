@@ -51,7 +51,8 @@
     "van-popup": "@vant/weapp/popup/index",
     "user-info":"/components/userInfo/userInfo",
     "pro-list":"/components/proList/proList",
-    "van-field": "@vant/weapp/field/index"
+    "van-field": "@vant/weapp/field/index",
+    "news-list":"/components/newsList/newsList"
   },
   "sitemapLocation": "sitemap.json"
 }

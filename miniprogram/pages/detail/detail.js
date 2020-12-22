@@ -57,7 +57,7 @@ Page({
       success(res){
         let is_favo = false;
         const { favo_list } = res.data;
-        favo_list.forEach((r,i) => {
+        !!favo_list && favo_list.forEach((r,i) => {
           if(r.pro_id === _this.pro_id) is_favo = true;
         })
         if(is_favo){

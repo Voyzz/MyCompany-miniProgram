@@ -1,2 +1,8 @@
-<!--miniprogram/pages/news_detail.wxml-->
-<text>miniprogram/pages/news_detail.wxml</text>
+<scroll-view class="outer_box" scroll-x="false" scroll-y="true">
+  <view class="container">
+    <image src="{{coverImg}}" mode="aspectFill common_shadow2" class="bg_img"/>
+    <view class="news_title">{{title}}</view>
+    <view class="news_date">{{data}}</view>
+    <view class="news_content common_shadow2">{{content}}</view>
+  </view>
+</scroll-view>

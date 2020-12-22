@@ -5,14 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    coverImg:'',
+    title:'',
+    data:'',
+    content:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    !!options.news_data && this.setData({
+      ...JSON.parse(options.news_data)
+    })
   },
 
   /**

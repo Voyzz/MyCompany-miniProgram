@@ -218,3 +218,10 @@
     background-color: #F2F5FC80;
     border-radius: 40rpx;
 }
+
+
+.popup_content_container {
+    /* height: 50vh; */
+    max-height: 60vh;
+    width: 750rpx;
+}

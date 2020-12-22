@@ -44,7 +44,6 @@ Page({
           _this.setData({
             hot_pro_list:res.data
           })
-          // console.log(res.data)
         }
       }
     })
@@ -98,47 +97,6 @@ Page({
     })
   },
 
-  // 点击新闻卡片
-  click_news_card : function (params) {
-    const {news_data} =  params.currentTarget.dataset;
-    wx.navigateTo({
-      url: '/pages/detail/detail?news_data='+JSON.stringify(news_data),
-    })
-  },
-
-  // 拨打电话
-  phone_call: function() {
-    wx.makePhoneCall({
-      phoneNumber: '18217501371',
-    })
-  },
-
-  // 邮件
-  copy_email: function() {
-    const title = '邮箱地址'
-    const content = '18217501371@163.com'
-    wx.showModal({
-      title: title,
-      content: content,
-      cancelText: '取消',
-      confirmText: '复制',
-      success: (res) => {
-        if (res.confirm) {
-          console.log('用户点击复制')
-          wx.setClipboardData({
-            data: content,
-            success: (res) => {
-              wx.showToast({
-                title: '已复制邮箱地址',
-              })
-            }
-          })
-        } else if (res.cancel) {
-          console.log('用户点击取消')
-        }
-      },
-    })
-  },
 
   onShareAppMessage: function () {
     return {

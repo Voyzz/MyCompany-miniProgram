@@ -9,6 +9,7 @@ Page({
     currProNum:'',
     is_loading:true,
     search_value:'',
+    show_popup:false
   },
 
   onLoad: function (options) {
@@ -123,6 +124,19 @@ Page({
         class_reg:_this.data.class_list[side_idx-1]
       },false)
     }
+  },
+
+  // 打开popup
+  open_favo:function (params) {
+    this.setData({
+      show_popup:true,
+    })
+  },
+  // 关闭popup
+  onClose:function (params) {
+    this.setData({
+      show_popup:false,
+    })
   },
   
 })
