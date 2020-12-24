@@ -19,7 +19,10 @@ Page({
   },
 
   onHide: function(){
-    this.click_reset();
+    // this.click_reset();
+    this.setData({
+      show_popup:false
+    })
   },
 
   // 请求接口
@@ -87,10 +90,11 @@ Page({
   // 重置搜索词
   click_reset : function() {
     this.setData({
-      search_value:''
+      search_value:'',
+      currSideIndex:0
     });
     this.fetch_pro_list({
-      is_basic:true
+      is_basic:true,
     },true)
   },
 

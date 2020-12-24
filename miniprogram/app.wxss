@@ -90,6 +90,12 @@ page {
   justify-content: flex-end;
   align-items: center;
 }
+.flex_row_start_end {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
 
 /* 文字内容 */
 .common_title {

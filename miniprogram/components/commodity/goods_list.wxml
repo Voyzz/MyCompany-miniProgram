@@ -1,7 +1,7 @@
 <template name='commodity_list'>
   <view class="list_container flex_row_start common_shadow">
     <view class="sidebar_box common_shadow">
-      <van-sidebar custom-class="sidebar" bind:change="onSideBarChange">
+      <van-sidebar custom-class="sidebar" bind:change="onSideBarChange" active-key="{{ currSideIndex }}">
         <van-sidebar-item title="全部" custom-class="sidebar_item" badge="{{currSideIndex == 0 ? currProNum : ''}}"/>
         <block wx:for="{{class_list}}" wx:for-item="class_item" wx:for-index="class_idx" wx:key="class_idx">
           <van-sidebar-item title="{{class_item}}" custom-class="sidebar_item" badge="{{currSideIndex == class_idx+1 ? currProNum : ''}}"/>

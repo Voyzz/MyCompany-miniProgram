@@ -12,7 +12,7 @@
         <van-icon name="like" size="16px" custom-class="icon" color="white"/>
         <text class="icon_text">已收藏</text>
       </view>
-      <view class="icon_box flex_row_space common_shadow" style="background-color:#92a5fe" >
+      <view class="icon_box flex_row_space common_shadow" style="background-color:#92a5fe" bindtap="detail_contact">
         <van-icon name="service" size="16px" custom-class="icon" color="white"/>
         <text class="icon_text">咨询</text>
       </view>

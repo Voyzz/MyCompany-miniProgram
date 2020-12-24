@@ -1,7 +1,7 @@
 <view>
 <!-- Loading -->
 <view class="loading_view" wx:if="{{is_loading}}">
-    <van-loading size="24px" color="#1989fa"type="spinner" />
+    <van-loading size="24px" color="#1989fa" />
 </view>
 <scroll-view 
     class="homepage_box"

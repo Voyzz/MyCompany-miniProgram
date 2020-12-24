@@ -1,6 +1,8 @@
 
 .popup_news_box {
   padding: 60rpx 50rpx;
+  padding: 60rpx 50rpx;
+  height: 65vh;
 }
 
 .title_box {

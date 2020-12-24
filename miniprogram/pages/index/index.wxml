@@ -11,7 +11,7 @@
     </view>
   </view>
   <!-- 订单信息 -->
-  <view class="order_box common_shadow2">
+  <view class="order_box common_shadow2" bindtap="click_order">
     <view class="square_item_box">
       <image src="{{orderInfo.icon}}" class="square_icon"></image>
       <view class="square_title">{{orderInfo.title}}</view>
@@ -48,11 +48,13 @@
       <view class="popup_content_container">
           <template is="pop_content_favorite" wx:if="{{curr_popup_content == 'favorite'}}"  data="{{favo_pro_list}}"/>
           <user-info wx:if="{{curr_popup_content == 'contact'}}"/>
-          <user-info wx:if="{{curr_popup_content == 'info'}}" type="info"/>
+          <user-info wx:if="{{curr_popup_content == 'info'}}" type="info" bind:closePopup="onClose"/>
           <pro-list wx:if="{{curr_popup_content == 'favo'}}" type="favo" />
           <pro-list wx:if="{{curr_popup_content == 'history'}}" type="history" />
           <news-list wx:if="{{curr_popup_content == 'news'}}"/>
       </view>
   </van-popup>
 </view>
+<van-toast id="van-toast" />
+<van-dialog id="van-dialog" />
 </scroll-view>

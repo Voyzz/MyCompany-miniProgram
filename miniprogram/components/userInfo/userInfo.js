@@ -1,9 +1,10 @@
 // components/userInfo/userInfo.js
+import Toast from '../../miniprogram_npm/@vant/weapp/toast/toast'
 Component({
   properties: {
     show_choose:{
       type:Boolean,
-      value:true
+      value:false
     },
     show_form:{
       type:Boolean,
@@ -40,6 +41,7 @@ Component({
           openid
         },
         success(res){
+          console.log(res);
           const { name,phone,compony,location } = res.data;
           if(!!name && !!phone && _this.data.type == 'contact'){
             _this.setData({
@@ -141,8 +143,10 @@ Component({
 
     // 更新用户信息
     form_update:function(){
+
       const { name,phone,compony,location } = this.data;
       const { baseUrl,openid,appid } = getApp();
+      const _this = this;
 
       wx.request({
         url: `${baseUrl}/updateUserInfo`,
@@ -156,7 +160,12 @@ Component({
           location
         },
         success(res){
-          console.log(res);
+          _this.triggerEvent("closePopup");
+          Toast.success('更新成功');
+        },
+        fail(res){
+          _this.triggerEvent("closePopup");
+          Toast.fail('请重试');
         }
       })      
     },

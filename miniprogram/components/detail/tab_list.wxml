@@ -1,9 +1,10 @@
 <import src="./tab_content/tab_one_content.wxml" />
 <import src="./tab_content/tab_two_content.wxml" />
+<import src="./tab_content/tab_three_content.wxml" />
 
 <template name="detail_tab_list">
-  <view class="tabList_box">
-    <van-tabs color="#ff8691" line-width="250rpx" title-active-color="#000000aa" title-inactive-color="#858585">
+  <view class="tabList_box common_shadow">
+    <van-tabs color="#ff8691" line-width="250rpx" title-active-color="#000000aa" title-inactive-color="#858585" >
       <van-tab title="产品详情" title-style="font-size:32rpx">
         <template is="detail_tab_one_contant" wx:if="{{pro_detail_list.length > 0}}" data="{{pro_detail_list}}"/>
         <van-empty description="暂无信息" image="error" wx:if="{{pro_detail_list.length === 0}}"/>
@@ -13,15 +14,8 @@
         <van-empty description="暂无图片" image="search" wx:if="{{pro_image_list.length === 0}}"/>
       </van-tab>
       <van-tab title="实时价格" title-style="font-size:32rpx">
-        <van-empty>
-          <van-button 
-            round
-            type="info"
-            custom-style="background-color:#92a5fe;border-width:0"
-            >
-            询问价格
-          </van-button>
-        </van-empty>
+        <template is="detail_tab_three_contant" wx:if="{{price_list.length > 0}}" data="{{price_list}}"/>
+        <van-empty description="暂无价格" image="network" wx:if="{{price_list.length === 0}}"/>
       </van-tab>
     </van-tabs>
   </view>

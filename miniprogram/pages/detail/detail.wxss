@@ -48,6 +48,7 @@
   background-color: #fff;
   z-index: 99;
   margin-top: 22vh;
+  /* margin-bottom: 20rpx; */
 }
 .detail_avatar{
   width: 280rpx;
@@ -103,7 +104,7 @@
   height: 30rpx;
   position: relative;
   background-color: #fff;
-  z-index: 10;
+  z-index: 9;
 }
 .tabList_box {
   width: 750rpx;
@@ -146,4 +147,50 @@
   width: 670rpx;
   height: 375rpx;
   margin-bottom: 50rpx;
+}
+
+/* tab3 */
+.detail_tab_three_contant_box {
+  box-sizing: border-box;
+  width: 750rpx;
+  padding: 40rpx;
+}
+.curr_price_box {
+  box-sizing: border-box;
+  width: 670rpx;
+  padding: 30rpx;
+  margin-bottom: 50rpx;
+}
+.curr_price_title {
+  font-size: 35rpx;
+  color:#679fe4;
+  margin-left: 10rpx;
+}
+.curr_price_line {
+  margin-top:50rpx;
+  color:#999;
+  position: relative;
+  margin-bottom: 20rpx;
+  padding-left: 20rpx;
+}
+.curr_price {
+  font-size: 60rpx;
+  font-weight: bold;
+  line-height: 60rpx;
+}
+.arrow_icon {
+  position: absolute;
+  right: 20rpx;
+  top: 0;
+}
+.price_date {
+  text-align: right;
+  color: #aaa;
+  font-size: 30rpx;
+}
+
+
+.popup_content_container {
+  max-height: 60vh;
+  width: 750rpx;
 }

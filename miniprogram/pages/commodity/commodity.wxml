@@ -4,7 +4,7 @@
 <view class="commodity_container flex_column_box">
     <!-- Loading -->
     <view class="loading_view" wx:if="{{is_loading}}">
-        <van-loading size="24px" color="#1989fa"type="spinner" />
+        <van-loading size="24px" color="#1989fa"/>
     </view>
     <template is="commodity_search" data="{{search_value}}"/>
     <template is="commodity_list" data="{{class_list,tags_list,pro_list,currSideIndex,currProNum}}"/>

@@ -3,7 +3,7 @@
     <image class="title_icon" src="/images/common/news_title.png"/>
     <view class="title_text">行业动态</view>
   </view>
-  <block wx:for="{{news_list}}" wx:key="index" wx:for-item="news">
+  <block wx:for="{{news_list}}" wx:key="index" wx:for-item="news" wx:if="{{!!news_list}}">
     <view class="popup_news_card common_shadow" bindtap="click_news_card" data-news_data="{{news}}">
       <image src="{{news.coverImg}}" mode="aspectFill" class="popup_news_img common_shadow2" />
       <view class="popup_news_content_box">
@@ -13,4 +13,5 @@
       </view>
     </view>
   </block>
+  <van-empty description="空空如也" image="search" wx:if="{{!!news_list && news_list.length == 0}}"/>
 </view>

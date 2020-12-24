@@ -5,7 +5,9 @@
   width: 750rpx;
 }
 .popup_news_box {
+  box-sizing: border-box;
   padding: 60rpx 50rpx;
+  height: 65vh;
 }
 .popup_news_card {
   width: 650rpx;

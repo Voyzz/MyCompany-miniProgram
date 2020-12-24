@@ -1,4 +1,5 @@
 // miniprogram/pages/detail.js
+import Toast from '../../miniprogram_npm/@vant/weapp/toast/toast'
 Page({
 
   /**
@@ -7,6 +8,7 @@ Page({
   data: {
     porduct_info:{},
     is_favorite:false,
+    show_popup:false
   },
   pro_id:'',
 
@@ -26,10 +28,30 @@ Page({
       },
       success(res){
         if(res.statusCode == 200){
+          let _pro_info = {...res.data[0]};
+
+          // 价格处理
+          if(!!_pro_info.price_list && _pro_info.price_list.length>0){
+            let _price_list = _pro_info.price_list.map((res,idx) => {
+              let _res = {...res}
+              if(idx !== _pro_info.price_list.length -1){
+                if(parseInt(_res.price) > parseInt(_pro_info.price_list[idx+1].price)){
+                  _res.asc = true;
+                }else {
+                  _res.asc = false;
+                }
+              }else{
+                _res.asc = true;
+              }
+              return _res
+            })
+            _pro_info.price_list = _price_list
+          }
+
           _this.setData({
-            porduct_info:res.data[0]
+            porduct_info:_pro_info
           })
-          console.log(res.data[0])
+          console.log(_pro_info)
         }
       }
     })
@@ -43,7 +65,7 @@ Page({
         history_pro_id:pro_id
       },
       success(res){
-        console.log(res);
+        // console.log(res);
       }
     })
 
@@ -85,6 +107,7 @@ Page({
         _this.setData({
           is_favorite:true
         })
+        Toast.success('收藏成功');
       }
     })
   },
@@ -105,7 +128,22 @@ Page({
         _this.setData({
           is_favorite:false
         })
+        Toast.success('取消收藏');
       }
+    })
+  },
+
+  // 打开popup
+  detail_contact:function(){
+    this.setData({
+      show_popup:true
+    })
+  },
+
+  // 关闭popup
+  onClose:function(){
+    this.setData({
+      show_popup:false
     })
   }
   

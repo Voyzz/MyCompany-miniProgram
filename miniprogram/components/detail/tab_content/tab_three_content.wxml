@@ -1,0 +1,25 @@
+<template name="detail_tab_three_contant">
+  <view class="detail_tab_three_contant_box">
+    <block wx:for="{{price_list}}" wx:key="index">
+      <view class="curr_price_box common_shadow2">
+        <view class="flex_row_start_center" wx:if="{{index === 0}}">
+          <van-icon name="bill" size="45rpx" color="#679fe4"/>
+          <view class="curr_price_title">{{index === 0 ? '最新价格' : item.date}}</view>
+        </view>
+        <view class="flex_row_start_end curr_price_line">
+          <view class="curr_price" style="color:{{item.asc ? '#f4bbbc' : '#97dbad'}}">
+            {{item.price}}
+          </view>
+          <view>{{item.currency}}</view>
+          <view> / </view>
+          <view>{{item.unit}}</view>
+          <view class="arrow_icon">
+            <van-icon name="arrow-up"  size="55rpx" color="#f4bbbc" wx:if="{{item.asc}}"/>
+            <van-icon name="arrow-down" size="55rpx" color="#97dbad" wx:if="{{!item.asc}}"/>
+          </view>
+        </view>
+        <view class="price_date">{{item.date}}</view>
+      </view>
+    </block>
+  </view>
+</template>

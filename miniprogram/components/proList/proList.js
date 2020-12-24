@@ -11,7 +11,7 @@ Component({
   },
 
   data: {
-    pro_list:[]
+    pro_list:null
   },
 
   lifetimes: {

@@ -52,7 +52,10 @@
     "user-info":"/components/userInfo/userInfo",
     "pro-list":"/components/proList/proList",
     "van-field": "@vant/weapp/field/index",
-    "news-list":"/components/newsList/newsList"
+    "news-list":"/components/newsList/newsList",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-dialog": "@vant/weapp/dialog/index"
   },
   "sitemapLocation": "sitemap.json"
 }

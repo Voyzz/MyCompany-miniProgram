@@ -5,7 +5,7 @@ Component({
   },
 
   data: {
-    news_list:[]
+    news_list:null
   },
 
   lifetimes: {

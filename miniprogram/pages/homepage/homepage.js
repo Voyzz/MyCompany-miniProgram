@@ -10,7 +10,7 @@ Page({
     is_loading:true
   },
 
-  onLoad: function (options) {
+  onShow: function (options) {
     const { baseUrl } = getApp();
     const _this = this;
 
@@ -31,6 +31,7 @@ Page({
         }
       }
     })
+    
 
     // 热门产品列表
     wx.request({
@@ -46,6 +47,16 @@ Page({
           })
         }
       }
+    })
+  },
+
+  onHide: function () {
+    this.setData({
+      modules_data:[],
+      show_popup:false,
+      curr_popup_content:'',
+      hot_pro_list:[],
+      is_loading:true
     })
   },
 

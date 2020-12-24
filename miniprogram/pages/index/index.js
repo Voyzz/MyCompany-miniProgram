@@ -1,6 +1,6 @@
 //index.js
 const app = getApp()
-
+import Dialog from '../../miniprogram_npm/@vant/weapp/dialog/dialog';
 Page({
   data: {
     show_popup:false,
@@ -67,8 +67,12 @@ Page({
     ]
   },
 
-  onLoad: function() {
-    
+  onHide: function() {
+    this.setData({
+      show_popup:false,
+      curr_popup_content:'',
+      favo_pro_list:[],
+    })
   },
 
   click_icon:function(e){
@@ -112,5 +116,15 @@ Page({
       show_popup:false,
     })
   },
+
+  // 点击订单
+  click_order:function(){
+    Dialog.alert({
+      title: '支付功能暂未开放',
+      message: '敬请期待',
+      theme: 'round-button',
+    }).then(() => {
+    });
+  }
 
 })
