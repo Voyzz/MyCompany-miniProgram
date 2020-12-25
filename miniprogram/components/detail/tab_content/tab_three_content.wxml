@@ -14,8 +14,8 @@
           <view> / </view>
           <view>{{item.unit}}</view>
           <view class="arrow_icon">
-            <van-icon name="arrow-up"  size="55rpx" color="#f4bbbc" wx:if="{{item.asc}}"/>
-            <van-icon name="arrow-down" size="55rpx" color="#97dbad" wx:if="{{!item.asc}}"/>
+            <van-icon name="back-top"  size="55rpx" color="#f4bbbc" wx:if="{{item.asc}}"/>
+            <van-icon name="down" size="55rpx" color="#97dbad" wx:if="{{!item.asc}}"/>
           </view>
         </view>
         <view class="price_date">{{item.date}}</view>

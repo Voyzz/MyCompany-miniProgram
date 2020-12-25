@@ -37,7 +37,7 @@
             <view class="common_title">{{module_item.module_data.title}}</view>
             <view class="common_subtitle">{{module_item.module_data.subtitle}}</view>
             <view class="common_content_box common_shadow2">
-                <text class="common_content">{{module_item.module_data.content}}</text>
+                <text class="common_content" space>{{module_item.module_data.content}}</text>
             </view>
         </view>
     </block>

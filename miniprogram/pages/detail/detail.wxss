@@ -194,3 +194,12 @@
   max-height: 60vh;
   width: 750rpx;
 }
+
+.pro_content {
+  box-sizing: border-box;
+  color: #777;
+  font-size: 30rpx;
+  font-weight: light;
+  width: 670rpx;
+  padding: 0 40rpx;
+}

@@ -66,12 +66,13 @@
 }
 .sidebar_item {
   height: 100rpx !important;
+  width: 180rpx;
   display: flex !important;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   background-color: #ffffff !important;
-  font-size: 30rpx!important;
+  font-size: 26rpx!important;
   font-weight: bold!important;
   color: #b9b9b9 !important;
 }
@@ -122,6 +123,10 @@
   color:#999;
   font-weight: light;
   margin-bottom: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 .tag_icon{
   margin-right: 5rpx;

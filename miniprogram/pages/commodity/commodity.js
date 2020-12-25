@@ -14,7 +14,7 @@ Page({
 
   onLoad: function (options) {
     this.fetch_pro_list({
-      is_basic:true
+      // is_basic:true
     },true)
   },
 
@@ -42,7 +42,7 @@ Page({
           const {data} = res;
           let _tags_list = [],_class_list=[];
 
-          // console.log(data);
+          console.log(data);
           if(init){
             data.forEach((item,idx) => {
               _tags_list = _tags_list.concat(item.tags_list);
@@ -94,7 +94,7 @@ Page({
       currSideIndex:0
     });
     this.fetch_pro_list({
-      is_basic:true,
+      // is_basic:true,
     },true)
   },
 

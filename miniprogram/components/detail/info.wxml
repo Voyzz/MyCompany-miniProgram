@@ -5,7 +5,7 @@
     <!-- icon -->
     <view class="info_line1 flex_row_end">
       <view class="icon_box flex_row_space common_shadow" wx:if="{{!is_favorite}}" style="background-color:#fff;border:#ff8691 1rpx solid" bindtap="add_to_favo">
-        <van-icon name="like" size="16px" custom-class="icon" color="#ff8691"/>
+        <van-icon name="like-o" size="16px" custom-class="icon" color="#ff8691"/>
         <text class="icon_text" style="color:#ff8691;">收藏</text>
       </view>
       <view class="icon_box flex_row_space common_shadow" wx:if="{{is_favorite}}" bindtap="remove_favo">

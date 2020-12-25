@@ -15,7 +15,12 @@
           <image src="{{pro_item.cover_img.img_url}}" class="pro_img" mode="aspectFill"/>
           <view class="pro_content flex_column_space">
             <view class="pro_title text_of_lines1">{{pro_item.title}}</view>
-            <view class="pro_subtitle text_of_lines1">{{pro_item.substitle}}</view>
+            <view class="pro_subtitle text_of_lines1" wx:if="{{pro_item.price_list && pro_item.price_list.length>0}}">
+              <view>{{pro_item.price_list[0].currency}}</view>
+              <view>{{pro_item.price_list[0].price}}</view>
+              <view style="margin-right:5rpx;margin-left:5rpx;">/</view>
+              <view>{{pro_item.price_list[0].unit}}</view>
+            </view>
             <view class="flex_row_start_center">
               <block wx:for="{{pro_item.tags_list}}" wx:for-item="tag_item" wx:for-index="tag_idx" wx:key="tag_idx">
                 <van-tag 
