@@ -11,7 +11,8 @@ Component({
   },
 
   data: {
-    pro_list:null
+    pro_list:null,
+    is_loading:true
   },
 
   lifetimes: {
@@ -32,6 +33,7 @@ Component({
           if(res.statusCode == 200){
             _this.setData({
               pro_list:res.data,
+              is_loading:false
             })
           }
         }

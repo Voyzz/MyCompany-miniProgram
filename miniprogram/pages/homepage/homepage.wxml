@@ -28,7 +28,7 @@
             <view wx:if="{{module_item.module_type == 'header'}}">
                 <swiper class="swiper_box" easing-function="easeInOutCubic" indicator-dots="{{module_item.module_data.config.indicator_dots}}" autoplay="{{module_item.module_data.config.autoplay}}" indicator-color="{{module_item.module_data.config.indicator_color}}">
                     <block wx:for="{{module_item.module_data.imgs}}" wx:for-item="img" wx:key="index">
-                        <swiper-item><image src="{{img}}" mode="aspectFill" class="swiper_img"></image></swiper-item>
+                        <swiper-item><image src="{{img}}" mode="scaleToFill" class="swiper_img"></image></swiper-item>
                     </block>
                 </swiper>
             </view>
@@ -54,7 +54,7 @@
         </block>
         <view class="bottom_line_container flex_row_space">
             <view class="bottom_line_news_box common_shadow flex_column_center" bindtap="show_news_popup">
-                <image src="/images/homepage/news@3x.png" class="news_img"></image>
+                <image src="/images/homepage/news@3x.png" class="news_img" mode="aspectFit"></image>
                 <view class="news_icon_title">行业动态</view>
                 <view class="news_icon_subtitle">NEWS</view>
             </view>

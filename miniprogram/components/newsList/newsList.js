@@ -5,7 +5,8 @@ Component({
   },
 
   data: {
-    news_list:null
+    news_list:null,
+    is_loading:true
   },
 
   lifetimes: {
@@ -26,7 +27,8 @@ Component({
           !!res.data && res.data.forEach((r) => {
             if(r.module_type === 'news'){
               _this.setData({
-                news_list:r.module_data.news_list
+                news_list:r.module_data.news_list,
+                is_loading:false
               })
             }
           })

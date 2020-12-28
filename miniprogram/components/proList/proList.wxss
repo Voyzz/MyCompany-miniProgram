@@ -107,3 +107,15 @@
   font-weight: bolder;
   margin-left: 130rpx;
 }
+
+
+.loading_view{
+  width: 600rpx;
+  height: 50vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  padding-top: 200rpx;
+}

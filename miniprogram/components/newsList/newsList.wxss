@@ -106,3 +106,14 @@
   box-shadow: 0 0 20rpx 5rpx #9e9e9e30;
 }
 
+
+.loading_view {
+  width: 600rpx;
+  height: 50vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  padding-top: 200rpx;
+}

@@ -3,6 +3,10 @@
     <image class="title_icon" src="{{'/images/common/' + (type == 'favo' ? 'favo_title' : 'history_title')  +'.png'}}"/>
     <view class="title_text">{{type == 'favo' ? '我的收藏' : '浏览历史'}}</view>
   </view>
+  <!-- Loading -->
+  <view class="loading_view" wx:if="{{is_loading}}">
+    <van-loading size="24px" color="#1989fa" />
+  </view>
   <block wx:for="{{pro_list}}" wx:key="index" wx:for-item="pro" wx:if="{{!!pro_list && pro_list.length>0}}">
     <view class="popup_news_card common_shadow" bindtap="click_favo_pro" data-pro_id="{{pro.pro_id}}">
       <image src="{{pro.cover_img.img_url}}" mode="aspectFill" class="popup_news_img common_shadow2" />

@@ -54,9 +54,9 @@
     height: 50rpx;
 }
 .search_text{
-    font-size: 32rpx;
-    color:#79a0fce8;
-    font-weight: lighter;
+    font-size: 34rpx;
+    color:#d2dffde8;
+    font-weight: bolder;
 }
 
 /* 背景渐变色 */

@@ -25,6 +25,7 @@ Component({
     phone:'',
     compony:'',
     location:'',
+    is_loading:true
   },
 
   lifetimes: {
@@ -47,14 +48,23 @@ Component({
             _this.setData({
               show_choose:false,
               show_form:false,
-              show_contact:true
+              show_contact:true,
+              is_loading:false
             })
           }else if( _this.data.type == 'info'){
             _this.setData({
               show_choose:false,
               show_form:true,
               show_contact:false,
+              is_loading:false,
               name,phone,compony,location
+            })
+          }else{
+            _this.setData({
+              show_choose:true,
+              show_form:false,
+              show_contact:false,
+              is_loading:false
             })
           }
 

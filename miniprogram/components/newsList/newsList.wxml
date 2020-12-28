@@ -3,6 +3,10 @@
     <image class="title_icon" src="/images/common/news_title.png"/>
     <view class="title_text">行业动态</view>
   </view>
+  <!-- Loading -->
+  <view class="loading_view" wx:if="{{is_loading}}">
+    <van-loading size="24px" color="#1989fa" />
+  </view>
   <block wx:for="{{news_list}}" wx:key="index" wx:for-item="news" wx:if="{{!!news_list}}">
     <view class="popup_news_card common_shadow" bindtap="click_news_card" data-news_data="{{news}}">
       <image src="{{news.coverImg}}" mode="aspectFill" class="popup_news_img common_shadow2" />
