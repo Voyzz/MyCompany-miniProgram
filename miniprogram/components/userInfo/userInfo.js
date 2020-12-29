@@ -183,14 +183,14 @@ Component({
     // 拨打电话
     phone_call: function() {
       wx.makePhoneCall({
-        phoneNumber: '18217501371',
+        phoneNumber: '15937398391',
       })
     },
 
     // 邮件
     copy_email: function() {
       const title = '邮箱地址'
-      const content = '18217501371@163.com'
+      const content = '15937398391@139.com'
       wx.showModal({
         title: title,
         content: content,
