@@ -1,7 +1,7 @@
 # 公司商用小程序
 <div align=center><img align="center" src="https://i.loli.net/2020/12/30/u4BcfRjk8q2DTFz.jpg" width="250px"/></div>
 
-# 联系我
+## 联系我
 [![](https://img.shields.io/badge/Wechat--informational?style=social&logo=wechat)](https://i.loli.net/2020/09/19/jHmZskwtUTF9oOh.png)
 [![](https://img.shields.io/badge/Github--informational?style=social&logo=github)](https://github.com/Voyzz)
 [![](https://img.shields.io/badge/Gmail--informational?style=social&logo=gmail)](voyzshen@gmail.com)
