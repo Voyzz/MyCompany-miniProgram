@@ -1,8 +1,10 @@
 //app.js
+import config from './config.js';
+const {baseUrl} = config
+
 App({
   // 全局变量
-  // baseUrl:'http://localhost:3000',
-  baseUrl:'https://www.voyz.pro/api',
+  baseUrl,
   openid:'',
   appid:'',
   onLaunch: function () {

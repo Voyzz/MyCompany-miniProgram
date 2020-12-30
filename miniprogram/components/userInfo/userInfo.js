@@ -1,5 +1,8 @@
 // components/userInfo/userInfo.js
 import Toast from '../../miniprogram_npm/@vant/weapp/toast/toast'
+import config from '../../config';
+const {contact} = config;
+
 Component({
   properties: {
     show_choose:{
@@ -183,14 +186,14 @@ Component({
     // 拨打电话
     phone_call: function() {
       wx.makePhoneCall({
-        phoneNumber: '15937398391',
+        phoneNumber: contact.phone,
       })
     },
 
     // 邮件
     copy_email: function() {
       const title = '邮箱地址'
-      const content = '15937398391@139.com'
+      const content = contact.email;
       wx.showModal({
         title: title,
         content: content,
