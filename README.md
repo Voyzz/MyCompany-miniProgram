@@ -1,14 +1,7 @@
-#【小程序】河南中帆东盛新材料技术有限公司👑
+# 公司商用小程序
+<div align=center><img align="center" src="https://i.loli.net/2020/12/30/u4BcfRjk8q2DTFz.jpg" width="250px"/></div>
+## 项目包含
+- [小程序](https://github.com/Voyzz/MyCompany-miniProgram)
+- [管理中台 ( React+TypeSciprt+Antd )](https://github.com/Voyzz/react-compony-mp-management)
+- [服务接口 ( Koa2+Mysql )](https://github.com/Voyzz/koa-micro-service)
 
-### 项目初始化
-- 初始化小程序项目
-
-### npm引入vant库
-
-```
-npm init -y //在根目录下
-cnpm i vant-weapp -S --production
-构建npm
-```
-
-### 配置tabbar
