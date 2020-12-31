@@ -51,7 +51,7 @@
 git clone https://github.com/Voyzz/MyCompany-miniProgram.git
 ```
 
-- 2.配置`miniprogram/config_model.js `中的`baseUrl`为自己的服务Url
+- 2.配置`miniprogram/config_model.js ` 中的参数 `baseUrl` 为自己的服务Url
 
 - 3.将项目导入`小程序开发工具`并运行
 
