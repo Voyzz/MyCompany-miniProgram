@@ -54,3 +54,6 @@ git clone https://github.com/Voyzz/MyCompany-miniProgram.git
 
 - 3.将项目导入`小程序开发工具`并运行
 
+## Versions
+> - **v1.0.0**   
+>> [发布] 生产版发布
