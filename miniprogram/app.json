@@ -55,7 +55,9 @@
     "news-list":"/components/newsList/newsList",
     "van-toast": "@vant/weapp/toast/index",
     "van-empty": "@vant/weapp/empty/index",
-    "van-dialog": "@vant/weapp/dialog/index"
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-collapse": "@vant/weapp/collapse/index",
+    "van-collapse-item": "@vant/weapp/collapse-item/index"
   },
   "sitemapLocation": "sitemap.json"
 }

@@ -7,7 +7,7 @@
         <van-loading size="24px" color="#1989fa"/>
     </view>
     <template is="commodity_search" data="{{search_value}}"/>
-    <template is="commodity_list" data="{{class_list,tags_list,pro_list,currSideIndex,currProNum}}"/>
+    <template is="commodity_list" data="{{levelClassList,class_list,tags_list,pro_list,currSideIndex,currProNum,activeNames}}"/>
     <van-popup 
         show="{{ show_popup }}"
         bind:close="onClose"

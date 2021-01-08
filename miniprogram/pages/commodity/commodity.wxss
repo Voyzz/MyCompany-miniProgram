@@ -72,13 +72,38 @@
   justify-content: center;
   align-items: flex-start;
   background-color: #ffffff !important;
-  font-size: 26rpx!important;
+  font-size: 25rpx!important;
   font-weight: bold!important;
   color: #b9b9b9 !important;
 }
 .van-sidebar-item--selected {
   border-color: #ff8691 !important;
   color: #679fe4 !important;
+}
+.collapse_box {
+  width: 180rpx;
+}
+.van-cell__title {
+  font-size: 25rpx !important;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.van-cell {
+  padding-left: 10rpx !important;
+  padding-right: 5rpx !important;
+  height: 100rpx !important;
+  line-height: 80rpx !important;
+  align-items: center !important;
+
+}
+.van-collapse-item__content {
+  padding: 10rpx !important;
+}
+.van-cell__right-icon-wrap {
+  margin-left: 0 !important;
 }
 
 /* 内容 */

@@ -3,13 +3,15 @@ Page({
   data: {
     tags_list:[],
     class_list:[],
+    levelClassList:null,
     pro_list:[],
     currClass:'全部',
     currSideIndex:0,
     currProNum:'',
     is_loading:true,
     search_value:'',
-    show_popup:false
+    show_popup:false,
+    activeNames: [],
   },
 
   onLoad: function (options) {
@@ -23,6 +25,13 @@ Page({
     this.setData({
       show_popup:false
     })
+  },
+
+  // 切换折叠面板
+  onChange(event) {
+    this.setData({
+      activeNames: event.detail,
+    });
   },
 
   // 请求接口
@@ -48,11 +57,36 @@ Page({
               _tags_list = _tags_list.concat(item.tags_list);
               _class_list = _class_list.concat(item.class_list);
             })
+
+            // 一二级标签分类
+            let levelClassList = []
+            const hashMap = new Map();
+            Array.from(new Set(_class_list)).map((r,i) => {
+              const _arr = r.split("-");
+              if(_arr.length < 2) _arr.push("");
+
+              if(hashMap.has(_arr[0])){
+                const _preArr = hashMap.get(_arr[0]);
+                const _newArr = _preArr.concat(_arr[1]);
+                hashMap.set(_arr[0],_newArr)
+              }else{
+                hashMap.set(_arr[0],[_arr[1]])
+              }
+            })
+            hashMap.forEach((v,k)=>{
+              let _obj = {}
+              _obj['class1'] = k
+              _obj['class2'] = v
+              levelClassList.push(_obj)
+            })
+            console.log(levelClassList);
   
             _this.setData({
               tags_list:Array.from(new Set(_tags_list)),
               class_list:Array.from(new Set(_class_list)),
+              levelClassList
             })
+            
           }
 
           let top_list = [],untop_list=[],_data;

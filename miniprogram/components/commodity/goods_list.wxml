@@ -2,10 +2,16 @@
   <view class="list_container flex_row_start common_shadow">
     <view class="sidebar_box common_shadow">
       <van-sidebar custom-class="sidebar" bind:change="onSideBarChange" active-key="{{ currSideIndex }}">
-        <van-sidebar-item title="全部" custom-class="sidebar_item" badge="{{currSideIndex == 0 ? currProNum : ''}}"/>
-        <block wx:for="{{class_list}}" wx:for-item="class_item" wx:for-index="class_idx" wx:key="class_idx">
-          <van-sidebar-item title="{{class_item}}" custom-class="sidebar_item" badge="{{currSideIndex == class_idx+1 ? currProNum : ''}}"/>
-        </block>
+        <van-sidebar-item title="全部" custom-class="sidebar_item"/>
+        <van-collapse value="{{ activeNames }}" bind:change="onChange" custom-class="collapse_box">
+          <block wx:for="{{levelClassList}}" wx:for-item="class_item" wx:for-index="class_idx" wx:key="class_idx">
+            <van-collapse-item title="{{class_item.class1}}" name="{{class_idx}}">
+              <block wx:for="{{class_item['class2']}}" wx:for-item="class2_item" wx:for-index="class2_idx" wx:key="class2_idx">
+                <van-sidebar-item title="{{class2_item}}" custom-class="sidebar_item"/>
+              </block>
+            </van-collapse-item>
+          </block>
+        </van-collapse>
       </van-sidebar>
     </view>
     <scroll-view class="content_box" scroll-x="false" scroll-y="true">
