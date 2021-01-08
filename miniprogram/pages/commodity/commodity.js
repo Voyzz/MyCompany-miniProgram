@@ -177,4 +177,16 @@ Page({
     })
   },
   
+  onShareAppMessage: function () {
+    return {
+      path: 'pages/homepage/homepage' ,
+      imageUrl:'https://lg-7pc5j6x4-1257302752.cos.ap-shanghai.myqcloud.com/logo3.jpg',
+      success: function (res) {
+        console.log('转发成功')
+      },
+      fail: function (res) {
+        console.log('转发失败')
+      }
+    }
+  },
 })
