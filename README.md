@@ -1,7 +1,7 @@
 # 公司商用小程序
 </br>
 
-<div align=center><img align="center" src="https://i.loli.net/2020/12/30/u4BcfRjk8q2DTFz.jpg" width="250px"/></div>
+<div align=center><img align="center" src="https://i.loli.net/2020/12/30/u4BcfRjk8q2DTFz.jpg" width="250px"/></div> 
 
 </br>
 
